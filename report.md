@@ -42,6 +42,11 @@ Looking at the missing values, I will:
  ## Variation 
  
  
+ ## Data processing and feature engineering
+ 
+- categorical fields into numerical: readmitted, age
+- some numeric intro categorical: diag_1 , diag_2, diag_3  
+ 
  
  
 # Unsupervised Learning
