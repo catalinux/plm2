@@ -7,9 +7,11 @@
 A couples of observations are made
 
 - `?` is used for `na` value
-- some classes are imbalanced
+- some categorical are imbalanced:  `readmitted`, `a1Cresult`, `diag_1`, `diag_2`, `diag_3`
 
 
+
+![diag](./img/bad_categ_diag_1.png){width=25%} ![diag](./img/bad_diag_2.png){width=25%} ![diag](./img/bad_diag_3.png){width=25%} ![diag](./img/bad_glu_serum){width=25%}
 
 ### Types
 
@@ -41,6 +43,7 @@ Looking at the missing values, I will:
  
  ## Variation 
  
+  
  
  ## Data processing and feature engineering
  

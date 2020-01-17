@@ -103,8 +103,17 @@ from sklearn.manifold import TSNE
 #
 
 
-corr = pd.DataFrame(num_df).corr()
-cmap = sns.diverging_palette(220, 10, as_cmap=True)
+def heatmap():
+    corr = pd.DataFrame(num_df).corr()
+    cmap = sns.diverging_palette(220, 10, as_cmap=True)
+    sns.heatmap(corr, cmap=cmap, vmax=.3, center=0,
+                square=True, linewidths=.5, cbar_kws={"shrink": .5})
 
-sns.heatmap(corr,  cmap=cmap, vmax=.3, center=0,
-            square=True, linewidths=.5, cbar_kws={"shrink": .5})
+
+#heatmap()
+
+
+for x in cat_df_list:
+    plt.figure()
+    sns.countplot(x=x, data=df)
+    plt.show()
