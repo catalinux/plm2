@@ -1,3 +1,4 @@
+import pickle
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -49,12 +50,12 @@ for i in range(2, 12):
     print("V-measure score for number of cluster(s) {}: {}".format(i, v_measure))
     print("-" * 100)
 
-scores=pd.DataFrame.from_dict({
+scores = pd.DataFrame.from_dict({
     "km_scores": km_scores,
     "km_silhouette": km_silhouette,
     "db_score": db_score,
     "vmeasure_score": vmeasure_score,
 })
 
-
-scores.to_file("a.bin")
+with open('score.bin', 'wb') as fp:
+    pickle.dump(scores, fp)

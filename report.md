@@ -11,8 +11,8 @@ A couples of observations are made
 
 
 
-![diag](./img/bad_categ_diag_1.png){width=25%} ![diag](./img/bad_diag_2.png){width=25%} ![diag](./img/bad_diag_3.png){width=25%} ![diag](./img/bad_glu_serum){width=25%}
 
+![diag](./img/bad_categ_diag_1.png){width=25%} ![diag](./img/bad_diag_2.png){width=25%} ![diag](./img/bad_diag3.png){width=25%} ![diag](./img/bad_glu_serum.png){width=25%}
 ### Types
 
 

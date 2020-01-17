@@ -1,3 +1,4 @@
+import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
@@ -68,7 +69,10 @@ def plot3d(X, y_pred, y_true, mode=None, centroids=None):
 
 def get_data():
     df = pd.read_csv('dataset_diabetes/diabetic_data.csv', na_values='?')
-    df2 = df.drop_duplicates(subset=['patient_nbr'], keep='first')
+
+    print("Shap1 ", df.shape)
+    df = df.drop_duplicates(subset=['patient_nbr'], keep='first')
+    print("Shape 2", df.shape)
 
     df = df.drop(["weight", "payer_code", "medical_specialty"], axis=1)
     df = df.drop(df[df.gender == 'Unknown/Invalid'].index)
@@ -86,4 +90,34 @@ def get_data():
                 "[70-80)": 75, "[80-90)": 85, "[90-100)": 95}
     df['age'] = df.age.map(age_dict)
     df['age'] = df['age'].astype('int64')
+
+    df['diabetesMed'] = np.where(df['diabetesMed'] == "Yes", 1, 0)
+
     return df
+
+
+def get_unclean_data():
+    df = pd.read_csv('dataset_diabetes/diabetic_data.csv', na_values='?')
+    df.head()
+    df_missing = df.copy()
+    missing = df_missing.isnull().sum()
+    print(missing)
+    missing_rates = np.round(100 * missing[missing > 0] / df.__len__(), 3).to_clipboard()
+
+    df = df.drop(["weight", "payer_code", "medical_specialty", 'encounter_id', 'admission_type_id',
+                  'discharge_disposition_id', 'admission_source_id'], axis=1)
+
+    df = df.drop(df[df.gender == 'Unknown/Invalid'].index)
+    df = df.drop_duplicates(subset=['patient_nbr'], keep='first')
+    meds = ['metformin', 'repaglinide', 'nateglinide', 'chlorpropamide', 'glimepiride', 'acetohexamide', 'glipizide',
+            'glyburide', 'tolbutamide', 'pioglitazone', 'rosiglitazone', 'acarbose', 'miglitol', 'troglitazone',
+            'tolazamide', 'examide', 'citoglipton', 'insulin', 'glyburide-metformin', 'glipizide-metformin',
+            'glimepiride-pioglitazone', 'metformin-rosiglitazone', 'metformin-pioglitazone']
+    df = df.drop(meds, axis=1)
+    df['service_utilization'] = df['number_outpatient'] + df['number_emergency'] + df['number_inpatient']
+    age_dict = {"[0-10)": 5, "[10-20)": 15, "[20-30)": 25, "[30-40)": 35, "[40-50)": 45, "[50-60)": 55, "[60-70)": 65,
+                "[70-80)": 75, "[80-90)": 85, "[90-100)": 95}
+    df['age'] = df.age.map(age_dict)
+    df['age'] = df['age'].astype('int64')
+    df = df.dropna()
+    return

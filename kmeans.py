@@ -32,13 +32,13 @@ from sklearn.cluster import KMeans
 # print('total cost: total', total)
 from sklearn.manifold import TSNE
 
-X = num_df[:20000]
+X = num_df.sample(20000)
 y = df["readmitted"]
 plot2d(X, y, y, TSNE)
 plot3d(X, y, y, TSNE)
 
 
-X = num_df[:4000]
+X = num_df[:20000]
 y = df["gender_t"]
 plot2d(X, y, y, TSNE)
 plot3d(X, y, y, TSNE)
