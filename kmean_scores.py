@@ -26,7 +26,7 @@ from sklearn.preprocessing import MinMaxScaler
 scaler = MinMaxScaler()
 numdf = df[num_df_list]
 X_scaled = scaler.fit_transform(numdf)
-y = numdf["gender"]
+y = df["gender"]
 from sklearn.metrics import silhouette_score, davies_bouldin_score, v_measure_score
 
 for i in range(2, 3):
