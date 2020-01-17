@@ -29,7 +29,7 @@ X_scaled = scaler.fit_transform(numdf)
 y = df["gender"]
 from sklearn.metrics import silhouette_score, davies_bouldin_score, v_measure_score
 
-for i in range(2, 3):
+for i in range(2, 12):
     km = KMeans(n_clusters=i, random_state=0).fit(X_scaled)
     preds = km.predict(X_scaled)
 
@@ -49,4 +49,9 @@ for i in range(2, 3):
     print("V-measure score for number of cluster(s) {}: {}".format(i, v_measure))
     print("-" * 100)
 
-v_measure.to_file()
+pd.DataFrame.from_dict({
+    "km_scores": km_scores,
+    "km_silhouette": km_silhouette,
+    "db_score": db_score,
+    "vmeasure_score": vmeasure_score,
+})
