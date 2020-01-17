@@ -10,6 +10,17 @@ A couples of observations are made
 - some classes are imbalanced
 
 
+
+### Types
+
+
+| type   | count |
+|--------|-------|
+| int64  | 13    |
+| object | 37    |
+
+
+
 ### Missing Values
 
 | name              |   %    |
@@ -32,3 +43,9 @@ Looking at the missing values, I will:
  
  
  
+ 
+# Unsupervised Learning
+
+## K-means 
+
+K-means is a type of unsupervised learning and one of the popular methods of clustering unlabelled data into k clusters. One of the trickier tasks in clustering is identifying the appropriate number of clusters k. 
