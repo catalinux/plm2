@@ -10,7 +10,6 @@ from sklearn import metrics
 
 df = pd.read_csv('dataset_diabetes/diabetic_data.csv', na_values='?')
 df.head()
-df=df.dropna()
 df_missing = df.copy()
 missing = df_missing.isnull().sum()
 print(missing)
@@ -30,18 +29,19 @@ age_dict = {"[0-10)": 5, "[10-20)": 15, "[20-30)": 25, "[30-40)": 35, "[40-50)":
             "[70-80)": 75, "[80-90)": 85, "[90-100)": 95}
 df['age'] = df.age.map(age_dict)
 df['age'] = df['age'].astype('int64')
+df=df.dropna()
 
 cat_df_list = list(df.select_dtypes(include=['object']))
 num_df_list = list(df.select_dtypes(include=['float64', 'int64']))
 
-for var in num_df_list:
-    sns_plot = sns.boxplot(x=var, y='PRICE', data=df)
-    sns_plot.set_title(var)
-    title = 'img/cat_bivar_price_' + var + '.png'
-    sns_plot.figure.savefig(title)
-    # for label in sns_plot.get_xticklabels():
-    #     label.set_rotation(45)
-    print("![" + var + "](./" + title + "){width=50%}")
+# for var in num_df_list:
+#     sns_plot = sns.boxplot(x=var, y='PRICE', data=df)
+#     sns_plot.set_title(var)
+#     title = 'img/cat_bivar_price_' + var + '.png'
+#     sns_plot.figure.savefig(title)
+#     # for label in sns_plot.get_xticklabels():
+#     #     label.set_rotation(45)
+#     print("![" + var + "](./" + title + "){width=50%}")
 
 from sklearn.preprocessing import StandardScaler
 

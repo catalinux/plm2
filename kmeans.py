@@ -8,6 +8,7 @@ from sklearn import metrics
 from munkres import Munkres, print_matrix
 
 from util import get_data
+from util import plot2d
 
 df = get_data()
 
@@ -18,18 +19,6 @@ num_df = df[num_df_list]
 from sklearn.metrics import cluster
 from sklearn.cluster import KMeans
 
-x = []
-rng = range(2, 14)
-for i in rng:
-    kmeans = KMeans(n_clusters=i, random_state=0).fit(num_df)
-    x.append( kmeans.inertia_)
-
-plt.plot(rng, x, 'bx-')
-plt.xlabel('k')
-plt.ylabel('Sum_of_squared_distances')
-plt.title('Elbow Method For Optimal k')
-plt.show()
-# matrix = cluster.contingency_matrix(df['readmitted'], kmeans.labels_)
 
 # m = Munkres()
 # indexes = m.compute(matrix)
@@ -40,3 +29,8 @@ plt.show()
 #     total += value
 #     print(f'({row}, {column}) -> {value}')
 # print('total cost: total', total)
+from sklearn.manifold import TSNE
+
+X = num_df[:20000]
+y = df["readmitted"]
+plot2d(X, y, y, TSNE)

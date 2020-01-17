@@ -53,4 +53,7 @@ Looking at the missing values, I will:
 
 ## K-means 
 
-K-means is a type of unsupervised learning and one of the popular methods of clustering unlabelled data into k clusters. One of the trickier tasks in clustering is identifying the appropriate number of clusters k. 
+K-means is a type of unsupervised learning and one of the popular methods of clustering unlabelled data into k clusters. One of the trickier tasks in clustering is identifying the appropriate number of clusters k.
+
+
+**Choosing K** 
