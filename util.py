@@ -326,6 +326,7 @@ def diag_mapper_icd9(diag):
 
 def prepare_data(data):
     cat_df_list = list(data.select_dtypes(include=['object']))
+    print("Encoding : ", cat_df_list)
     for i in cat_df_list:
         le = LabelEncoder()
         le.fit(list(data[i].unique()))

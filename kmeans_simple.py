@@ -15,8 +15,9 @@ from sklearn.preprocessing import StandardScaler
 
 X = num_df
 
-y = df["readmitted"]
 X = prepare_data(df)
+y = df["readmitted"]
+X.drop(["readmitted"],axis=1, inplace=True)
 
 scaler = StandardScaler()
 X = StandardScaler().fit_transform(X)
@@ -31,7 +32,7 @@ sampler = NearMiss()
 X_rs, y_rs = sampler.fit_sample(X, y)
 
 kmeans = KMeans(n_clusters=2)
-labels = kmeans.fit_predict(X_rs)
+##labels = kmeans.fit_predict(X_rs)
 
 from util import plot2d
 from util import plot3d

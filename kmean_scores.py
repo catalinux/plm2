@@ -1,3 +1,4 @@
+from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import LabelEncoder
 
 import pickle
@@ -16,6 +17,7 @@ from sklearn.metrics import cluster
 from sklearn.cluster import KMeans
 
 from util import get_data
+from util import prepare_data
 
 df = get_data()
 
@@ -27,32 +29,40 @@ km_silhouette = []
 vmeasure_score = []
 db_score = []
 
-from sklearn.preprocessing import MinMaxScaler
+y = df["readmitted"]
+X = prepare_data(df)
 
-scaler = MinMaxScaler()
-numdf = df[num_df_list]
-X_scaled = scaler.fit_transform(numdf)
-y = df["gender"]
+scaler = StandardScaler()
+X = StandardScaler().fit_transform(X)
+
+from imblearn.under_sampling import (RandomUnderSampler,
+                                     ClusterCentroids,
+                                     TomekLinks,
+                                     NeighbourhoodCleaningRule,
+                                     NearMiss)
+
+sampler = NearMiss()
+X_rs, y_rs = sampler.fit_sample(X, y)
+
 from sklearn.metrics import silhouette_score, davies_bouldin_score, v_measure_score
 
 r = range(2, 40)
 for i in r:
-    km = KMeans(n_clusters=i, random_state=0, n_jobs=2).fit(X_scaled)
-    preds = km.predict(X_scaled)
+    print("===== " + str(i))
+    km = KMeans(n_clusters=i, random_state=0, n_jobs=2).fit(X_rs)
+    preds = km.predict(X_rs)
 
-    print("Score for number of cluster(s) {}: {}".format(i, km.score(X_scaled)))
-    km_scores.append(-km.score(X_scaled))
+    print("Score for number of cluster(s) {}: {}".format(i, km.score(X_rs)))
+    km_scores.append(-km.score(X_rs))
 
     inertia.append(km.inertia_)
-    # silhouette = silhouette_score(X_scaled, preds)
+    # silhouette = silhouette_score(X_rs, preds)
     # km_silhouette.append(silhouette)
     # print("Silhouette score for number of cluster(s) {}: {}".format(i, silhouette))
     #
-    # db = davies_bouldin_score(X_scaled, preds)
+    # db = davies_bouldin_score(X_rs, preds)
     # db_score.append(db)
     # print("Davies Bouldin score for number of cluster(s) {}: {}".format(i, db))
-
-
 
     # v_measure = v_measure_score(y, preds)
     # vmeasure_score.append(v_measure)
@@ -62,10 +72,10 @@ for i in r:
 scores = pd.DataFrame.from_dict({
     "k": r,
     "km_scores": km_scores,
-    "km_silhouette": km_silhouette,
-    "db_score": db_score,
-    "inertia": inertia,
-#    "vmeasure_score": vmeasure_score,
+    # "km_silhouette": km_silhouette,
+    # "db_score": db_score,
+    # "inertia": inertia,
+    #    "vmeasure_score": vmeasure_score,
 })
 
 with open('score.bin', 'wb') as fp:
