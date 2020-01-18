@@ -1,6 +1,19 @@
 # Dataset
 
+
+The dataset represents 10 years (1999-2008) of clinical care at 130 US hospitals and integrated delivery networks
+
 ## Abstract
+
+It includes over 50 features representing patient and hospital outcomes. Information was extracted from the database for encounters that satisfied the following criteria.
+
+- It is an inpatient encounter (a hospital admission).
+- It is a diabetic encounter, that is, one during which any kind of diabetes was entered to the system as a diagnosis.
+- The length of stay was at least 1 day and at most 14 days.
+- Laboratory tests were performed during the encounter.
+(5) Medications were administered during the encounter.
+The data contains such attributes as patient number, race, gender, age, admission type, time in hospital, medical specialty of admitting physician, number of lab test performed, HbA1c test result, diagnosis, number of medication, diabetic medications, number of outpatient, inpatient, and emergency visits in the year before the hospitalization, etc.
+
 
 ## Exploratory Data Analysis
 
@@ -40,9 +53,8 @@ Looking at the missing values, I will:
  - drop na rows for diag_1, diag , diag_3, race 
  
  
-
  
-##Data processing and feature engineering
+## Data processing and feature engineering
  
  
 **Removal**  
@@ -52,6 +64,7 @@ Looking at the missing values, I will:
 -   
 
 **Tramsformation**
+
 Kmean and DB-Scan perform well on numeric features as they need a distance between to points,  so I transformed as many as I could from categorical to numeric
 
 - age ranges into - age median
@@ -63,13 +76,13 @@ For categorical features I reduced their unique values and after that LabeledEnc
 
 **Class imbalance
 
-Undersamples was tried but no results were able to generate anymore
+Undersamples was used in order to unsample majority class using method `NearMiss`
  
  
  
-##Unsupervised Learning
+# Unsupervised Learning
 
-###K-means 
+## K-means 
 
 K-means is a type of unsupervised learning and one of the popular methods of clustering unlabelled data into k clusters. One of the trickier tasks in clustering is identifying the appropriate number of clusters k.
 
@@ -82,21 +95,17 @@ Several metrics are used to choose K.
 - *Davies-Bouldin score* <sup>[1](#myfootnote1)</sup>  -  average similarity measure of each cluster with its most similar cluster. The minimum score is zero, with lower values indicating better clustering.
 - *Silhouette Coefficient* <sup>[2](#myfootnote2)</sup> -  the mean intra-cluster distance (a) and the mean nearest-cluster distance (b) for each sample. The best value is 1 and the worst value is -1. Values near 0 indicate overlapping clusters.
 
-Looking at these tree graphs it looks that the best value for K  would be 3 or 4
+Looking at these tree graphs it looks that the best value for K  would be 8
 
 
 ![km_scores](./img/km_scores_km_scores.png){width=33%}  ![km_silhouette](./img/km_scores_km_silhouette.png){width=33%} ![db_score](./img/km_scores_db_score.png){width=33%} 
 
 
-
-
-<a name="myfootnote1">1</a>. Davies, David L.; Bouldin, Donald W. (1979). “A Cluster Separation Measure”. IEEE Transactions on Pattern Analysis and Machine Intelligence. PAMI-1 (2): 224-227
-
-<a name="myfootnote2"></a>. [Wikipedia entry on the Silhouette Coefficient](https://en.wikipedia.org/wiki/Silhouette_(clustering))
+]
 
 
 
-##DBSCAN
+## DBSCAN
 
 
 DBSCAN is data clustering algorithm that groups points which are closely packed together in feature space
@@ -106,11 +115,22 @@ DBSCAN is data clustering algorithm that groups points which are closely packed 
 
 Epsilon : choos 3
 
-![epsilon](./img/epsilon.png)
-
-
-###Hyperparameter tuning
+![epsilon](./img/epsilon.png){width=40%}
 
 
 
- 
+
+
+# Conclusions
+
+
+
+
+
+# References
+
+<a name="myfootnote1">1</a>. Davies, David L.; Bouldin, Donald W. (1979). “A Cluster Separation Measure”. IEEE Transactions on Pattern Analysis and Machine Intelligence. PAMI-1 (2): 224-227
+
+<a name="myfootnote2"></a>. [Wikipedia entry on the Silhouette Coefficient](https://en.wikipedia.org/wiki/Silhouette_(clustering))
+
+

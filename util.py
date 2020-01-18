@@ -257,7 +257,7 @@ def get_unclean_data():
     df['age'] = df.age.map(age_dict)
     df['age'] = df['age'].astype('int64')
     df = df.dropna()
-    return
+    return df
 
 
 def diag_mapper_icd9(diag):

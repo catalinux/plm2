@@ -9,6 +9,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+
+
 titles = {
     "km_scores": "The Elbow Method",
     'km_silhouette': "Silhouette - The best value is 1 and the worst value is -1",
@@ -33,7 +35,7 @@ list = {
     'vmeasure_score': "",
     "inertia": ""
 }
-for col in ['km_scores', 'km_silhouette']:
+for col in ['km_scores',  'db_score']:
     fig = plt.figure()
     list[col] = (fig)
     plt.plot(a["k"], a[col], 'bx-')
@@ -41,6 +43,6 @@ for col in ['km_scores', 'km_silhouette']:
     plt.ylabel(labels[col])
     plt.title(titles[col])
     plt.show()
-    png = './img/km_scores_' + col + '.png'
+    png = './img/km_scores_50' + col + '.png'
     print("![" + col + "](" + png + "){width=33%} ")
     fig.savefig(png)

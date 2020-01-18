@@ -15,12 +15,12 @@ from sklearn.preprocessing import StandardScaler
 
 X = num_df
 
-X = prepare_data(df)
+X = df[num_df_list]
 y = df["readmitted"]
-X.drop(["readmitted"],axis=1, inplace=True)
+# X.drop(["readmitted"],axis=1, inplace=True)
 
-scaler = StandardScaler()
-X = StandardScaler().fit_transform(X)
+# scaler = StandardScaler()
+# X = StandardScaler().fit_transform(X)
 
 from imblearn.under_sampling import (RandomUnderSampler,
                                      ClusterCentroids,
@@ -31,14 +31,25 @@ from imblearn.under_sampling import (RandomUnderSampler,
 sampler = NearMiss()
 X_rs, y_rs = sampler.fit_sample(X, y)
 
-kmeans = KMeans(n_clusters=2)
-##labels = kmeans.fit_predict(X_rs)
-
 from util import plot2d
 from util import plot3d
 from sklearn.manifold import TSNE
 
 from sklearn.decomposition import PCA
+
+from sklearn.manifold import TSNE
+
+# plot2d(X_rs, labels, labels, mode=TSNE)
+kmeans = KMeans(n_clusters=8)
+labels = kmeans.fit_predict(X_rs)
+plot2d(X_rs, labels, labels, mode=TSNE)
+plot3d(X_rs, labels, labels, mode=TSNE)
+
+kmeans = KMeans(n_clusters=2)
+labels = kmeans.fit_predict(X_rs)
+plot2d(X_rs, labels, y_rs, mode=TSNE, centroids=kmeans.cluster_centers_)
+
+plot2d(X_rs, labels, labels, mode=TSNE, centroids=kmeans.cluster_centers_)
 
 # plot2d(X, labels, labels, mode=PCA, centroids=kmeans.cluster_centers_)
 # plot2d(X, kmeans.labels_, y, mode=PCA, centroids=kmeans.cluster_centers_)
@@ -63,3 +74,25 @@ from sklearn.decomposition import PCA
 #
 # y = new_df["readmitted"]
 # plot2d(new_df[num_df_list], y, y, mode=TSNE)
+
+import numpy as np
+
+from sklearn.cluster import DBSCAN
+from sklearn import metrics
+from sklearn.datasets import make_blobs
+from sklearn.preprocessing import StandardScaler
+
+n_clusters_ = len(set(labels)) - (1 if -1 in labels else 0)
+n_noise_ = list(labels).count(-1)
+
+print('Estimated number of clusters: %d' % n_clusters_)
+print('Estimated number of noise points: %d' % n_noise_)
+print("Homogeneity: %0.3f" % metrics.homogeneity_score(labels_true, labels))
+print("Completeness: %0.3f" % metrics.completeness_score(labels_true, labels))
+print("V-measure: %0.3f" % metrics.v_measure_score(labels_true, labels))
+print("Adjusted Rand Index: %0.3f"
+      % metrics.adjusted_rand_score(labels_true, labels))
+print("Adjusted Mutual Information: %0.3f"
+      % metrics.adjusted_mutual_info_score(labels_true, labels))
+print("Silhouette Coefficient: %0.3f"
+      % metrics.silhouette_score(X, labels))

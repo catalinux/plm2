@@ -20,7 +20,9 @@ from util import plot2d
 from util import drop_numerical_outliers
 from sklearn.decomposition import PCA
 
+
 df = get_data()
+df[df["max_glu_serum"]!=2]
 cat_df_list = list(df.select_dtypes(include=['object']))
 num_df_list = list(df.select_dtypes(include=['float64', 'int64']))
 num_df = df[num_df_list]
@@ -85,6 +87,7 @@ def histnum():
         plt.figure()
         plt.hist(num_df[x])
         plt.title(x)
+        plt.xlabel(x)
         plt.show()
 
 
@@ -142,3 +145,5 @@ X_rs, y_rs = sampler.fit_sample(X, y)
 #
 plot2d(X_rs, y_rs, y_rs, PCA)
 #plot3d(X_rs, y_rs, y_rs, PCA)
+X = df[num_df_list]
+plot2d(X,df["readmitted"],df["readmitted"], PCA)

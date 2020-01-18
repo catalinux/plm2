@@ -7,7 +7,7 @@ from util import prepare_data
 from util import plot2d
 import pandas as pd
 
-df = get_data().sample(10000)
+df = get_data()
 from sklearn.decomposition import PCA
 import numpy as np
 from sklearn.datasets.samples_generator import make_blobs
@@ -33,8 +33,8 @@ y = df["readmitted"]
 # X = prepare_data(df)
 # X =
 # X.drop("readmitted", inplace=True, axis=1)
-# scaler = StandardScaler()
-# X = StandardScaler().fit_transform(X)
+scaler = StandardScaler()
+X = StandardScaler().fit_transform(X)
 
 from imblearn.under_sampling import (RandomUnderSampler,
                                      ClusterCentroids,
@@ -42,9 +42,8 @@ from imblearn.under_sampling import (RandomUnderSampler,
                                      NeighbourhoodCleaningRule,
                                      NearMiss)
 
-
-# sampler = NearMiss(n_jobs=2)
-# X_rs, y_rs = sampler.fit_sample(X, y)
+sampler = NearMiss(n_jobs=2)
+X_rs, y_rs = sampler.fit_sample(X, y)
 
 # sc=[]
 # for i in np.linspace(3,40):
@@ -64,17 +63,20 @@ from imblearn.under_sampling import (RandomUnderSampler,
 
 
 # plot2d(X, clustering.labels_, y, mode=PCA)
-def distances_nn():
-    neigh = NearestNeighbors(n_neighbors=32)
-    nbrs = neigh.fit(X)
+# def distances_nn(n_neighbors):
+
+for i in range(2, 12):
+    print("Plot " + str(i))
+    neigh = NearestNeighbors(n_neighbors=i)
+    nbrs = neigh.fit(X_rs)
     # Find the nearest neighbors of the data points and determine the distances
-    distances, indices = nbrs.kneighbors(X)
+    distances, indices = nbrs.kneighbors(X_rs)
     distances = np.sort(distances, axis=0)
     distances = distances[:, 1]
     plt.plot(distances)
     plt.savefig('NearestNeighbors.png')
-    plt.show()
 
+plt.show()
 
 # Init NearestNeighbors with n_neighbors = 4 and fit on the training data
 # distances_nn()
@@ -123,8 +125,17 @@ def distances_nn():
 #     c_c.append(set(m.labels_).__len__())
 
 
-m = DBSCAN(eps=5, min_samples=5)
+# m = DBSCAN(eps=5, min_samples=5)
+# m.fit(X)
+# print(set(m.labels_))
+
+# plot2d(X, m.labels_, m.labels_, mode=PCA)
+m = DBSCAN(eps=1.5, min_samples=5)
 m.fit(X)
 print(set(m.labels_))
 
-#plot2d(X, m.labels_, m.labels_, mode=PCA)
+m = DBSCAN(eps=0.7, min_samples=5)
+m.fit(X)
+print(set(m.labels_))
+from sklearn.manifold import TSNE
+plot2d(X, m.labels_, m.labels_, mode=TSNE)
