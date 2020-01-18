@@ -60,9 +60,9 @@ for i in r:
     km_silhouette.append(silhouette)
     # print("Silhouette score for number of cluster(s) {}: {}".format(i, silhouette))
     #
-    # db = davies_bouldin_score(X_rs, preds)
-    # db_score.append(db)
-    # print("Davies Bouldin score for number of cluster(s) {}: {}".format(i, db))
+    db = davies_bouldin_score(X_rs, preds)
+    db_score.append(db)
+    print("Davies Bouldin score for number of cluster(s) {}: {}".format(i, db))
 
     # v_measure = v_measure_score(y, preds)
     # vmeasure_score.append(v_measure)
