@@ -50,17 +50,20 @@ for i in r:
     db_score.append(db)
     print("Davies Bouldin score for number of cluster(s) {}: {}".format(i, db))
 
-    v_measure = v_measure_score(y, preds)
-    vmeasure_score.append(v_measure)
-    print("V-measure score for number of cluster(s) {}: {}".format(i, v_measure))
-    print("-" * 100)
+
+
+    # v_measure = v_measure_score(y, preds)
+    # vmeasure_score.append(v_measure)
+    # print("V-measure score for number of cluster(s) {}: {}".format(i, v_measure))
+    # print("-" * 100)
 
 scores = pd.DataFrame.from_dict({
     "k": r,
     "km_scores": km_scores,
     "km_silhouette": km_silhouette,
     "db_score": db_score,
-    "vmeasure_score": vmeasure_score,
+    "inertia": inertia,
+#    "vmeasure_score": vmeasure_score,
 })
 
 with open('score.bin', 'wb') as fp:

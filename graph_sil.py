@@ -20,7 +20,15 @@ cat_df_list = list(df.select_dtypes(include=['object']))
 num_df_list = list(df.select_dtypes(include=['float64', 'int64']))
 X = df[num_df_list]
 range_n_clusters = [2, 3, 4, 5, 6]
-range_n_clusters = [2, 2]
+range_n_clusters = [4, 5, 6]
+from sklearn.preprocessing import StandardScaler
+
+X_std = X_std = StandardScaler().fit_transform(X)
+
+from sklearn.manifold import TSNE
+
+transformer = TSNE(n_components=2)
+X_std = transformer.fit_transform(X_std)
 
 for n_clusters in range_n_clusters:
     # Create a subplot with 1 row and 2 columns
@@ -37,7 +45,7 @@ for n_clusters in range_n_clusters:
 
     # Initialize the clusterer with n_clusters value and a random generator
     # seed of 10 for reproducibility.
-    clusterer = KMeans(n_clusters=n_clusters, random_state=10)
+    clusterer = KMeans(n_clusters=n_clusters, random_state=10, n_jobs=2)
     cluster_labels = clusterer.fit_predict(X)
 
     # The silhouette_score gives the average value for all the samples.
@@ -73,7 +81,7 @@ for n_clusters in range_n_clusters:
         # Compute the new y_lower for next plot
         y_lower = y_upper + 10  # 10 for the 0 samples
 
-    ax1.set_title("The silhouette plot for the various clusters.")
+    ax1.set_title(".")
     ax1.set_xlabel("The silhouette coefficient values")
     ax1.set_ylabel("Cluster label")
 
@@ -85,7 +93,7 @@ for n_clusters in range_n_clusters:
 
     # 2nd Plot showing the actual clusters formed
     colors = cm.nipy_spectral(cluster_labels.astype(float) / n_clusters)
-    ax2.scatter(X[:, 0], X[:, 1], marker='.', s=30, lw=0, alpha=0.7, c=colors, edgecolor='k')
+    ax2.scatter(X_std[:, 0], X_std[:, 1], marker='.', s=30, lw=0, alpha=0.7, c=colors, edgecolor='k')
 
     # Labeling the clusters
     centers = clusterer.cluster_centers_
@@ -101,8 +109,6 @@ for n_clusters in range_n_clusters:
     ax2.set_xlabel("Feature space for the 1st feature")
     ax2.set_ylabel("Feature space for the 2nd feature")
 
-    plt.suptitle(("Silhouette analysis for KMeans clustering on sample data "
-                  "with n_clusters = %d" % n_clusters),
-                 fontsize=14, fontweight='bold')
+    plt.suptitle(("n_clusters = %d" % n_clusters), fontsize=14, fontweight='bold')
 
-plt.show()
+    plt.show()

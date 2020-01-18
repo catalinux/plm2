@@ -109,7 +109,7 @@ def get_data():
 
     df['diabetesMed'] = np.where(df['diabetesMed'] == "Yes", 1, 0)
 
-    df.drop(df['discharge_disposition_id'].isin([13, 14, 11, 19, 20, 21]).index)
+   # df = df.drop(df['discharge_disposition_id'].isin([13, 14, 11, 19, 20, 21]).index)
 
     # 11, 19, 20, 21     mean    the     patient    died
     df['admission_type_id'].value_counts()
@@ -154,8 +154,8 @@ def get_data():
     df.drop(['admission_type_id', 'encounter_id', 'patient_nbr'], axis=1, inplace=True)
     s = df["admission_source_id"].value_counts()
     df['admission_source_id'].isin(s.index[s >= 30]).index
-
-    df = df.drop(['discharge_disposition_id','admission_source_id'], axis=1)
+    # df = df.drop(['discharge_disposition_id', 'admission_source_id'], axis=1)
+    df = df[df["service_utilization"] < 11]
 
     return df
 

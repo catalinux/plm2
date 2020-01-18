@@ -56,16 +56,16 @@ m.fit(X)
 colors = ['royalblue', 'maroon', 'forestgreen', 'mediumorchid', 'tan', 'deeppink', 'olive', 'goldenrod', 'lightcyan', 'navy']
 vectorizer = np.vectorize(lambda x: colors[x % len(colors)])
 
-
-clusters = m.labels_
-plt.scatter(X["time_in_hospital"], X["num_lab_procedures"], c=vectorizer(clusters))
-
-#plot2d(X, clustering.labels_, y, mode=PCA)
-
-plt.figure()
-
-from sklearn.manifold import TSNE
-plot2d(X, m.labels_, y, TSNE)
-
-plt.figure()
-#plot2d(X, y, y, TSNE)
+#
+# clusters = m.labels_
+# plt.scatter(X["time_in_hospital"], X["num_lab_procedures"], c=vectorizer(clusters))
+#
+# #plot2d(X, clustering.labels_, y, mode=PCA)
+#
+# plt.figure()
+#
+# from sklearn.manifold import TSNE
+# plot2d(X, m.labels_, y, TSNE)
+#
+# plt.figure()
+# #plot2d(X, y, y, TSNE)

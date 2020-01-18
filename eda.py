@@ -12,7 +12,6 @@ from util import get_data
 from util import get_unclean_data
 
 df = get_data()
-df=df[df["readmitted"]==0]
 cat_df_list = list(df.select_dtypes(include=['object']))
 num_df_list = list(df.select_dtypes(include=['float64', 'int64']))
 num_df = df[num_df_list]
@@ -86,6 +85,7 @@ def histnum():
     # generate_scatters()
 
 
-for x in num_df_list:
-    sns.boxplot(x=df[x])
-    plt.show()
+
+# for x in num_df_list:
+#     sns.boxplot(x=df[x])
+#     plt.show()

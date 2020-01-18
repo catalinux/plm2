@@ -58,7 +58,7 @@ X_resampled, y_resampled = cc.fit_resample(X, y)
 print(sorted(Counter(y_resampled).items()))
 
 
-X = num_df
+X = num_df.sample(1000)
 y = df["readmitted"]
 plot2d(X, y, y, TSNE)
 #plot3d(X, y, y, TSNE)
