@@ -124,7 +124,6 @@ def get_data():
                    'outpatient']
 
     df['discharge_disposition_id'] = df['discharge_disposition_id'].replace(list(range(1, 31)), replacelist)
-    df["gender_t"] = df["gender"].map({"Female": 0, "Male": 1})
     df["admission"] = df["admission_source_id"].map({1: " Physician Referral",
                                                      2: "Clinic Referral",
                                                      3: "HMO Referral",

@@ -12,7 +12,7 @@ A couples of observations are made
 
 
 
-### Types
+###Types
 
 | type   | count |
 |--------|-------|
@@ -22,7 +22,7 @@ A couples of observations are made
 
 
 
-### Missing Values
+###Missing Values
 
 | name              |   %    |
 |-------------------|--------|
@@ -40,11 +40,11 @@ Looking at the missing values, I will:
  - drop na rows for diag_1, diag , diag_3, race 
  
  
- ##Variation 
+##Variation 
  
   
  
- ## Data processing and feature engineering
+###Data processing and feature engineering
  
 - categorical fields into numerical: readmitted, age
 - some numeric intro categorical: diag_1 , diag_2, diag_3
@@ -67,7 +67,7 @@ Kmean and DB-Scan perform well on numeric features as they need a distance betwe
 K-means is a type of unsupervised learning and one of the popular methods of clustering unlabelled data into k clusters. One of the trickier tasks in clustering is identifying the appropriate number of clusters k.
 
 
-** Evaluation metrics and choosing K **
+**Evaluation metrics and choosing K**
 
 Several metrics are used to choose K. 
 
@@ -89,10 +89,14 @@ Looking at these tree graphs it looks that the best value for K  would be 3 or 4
 
 
 
-## DBSCAN
+##DBSCAN
+
+
+DBSCAN is data clustering algorithm that groups points which are closely packed together in feature space
 
 
 
+###Hyperparameter tuning
 
 
 

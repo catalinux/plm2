@@ -1,0 +1,959 @@
+feature 1,value 1,feature 2,value 2,ratio,num samples
+race,AfricanAmerican,age,[10-20),1.607834889757047,155
+race,AfricanAmerican,age,[20-30),1.8367432316768326,373
+race,AfricanAmerican,age,[30-40),1.716908391702343,835
+race,AfricanAmerican,age,[40-50),1.5120666942955263,1874
+race,AfricanAmerican,age,[80-90),0.563151041025858,1176
+race,Hispanic,age,[30-40),2.4803629753249763,142
+race,Hispanic,age,[40-50),1.6039228186973917,234
+race,Hispanic,age,[80-90),0.44341493334125126,109
+race,Other,age,[80-90),0.5919738889448032,113
+race,?,admission_type_id,Urgent,1.7077381586587477,606
+race,AfricanAmerican,admission_type_id,Not Available,0.45984594215758134,263
+race,Hispanic,admission_type_id,NULL,2.127045187957005,207
+race,AfricanAmerican,discharge_disposition_id,Discharged/transferred to another short term hospital,0.5048390586380046,140
+race,Hispanic,discharge_disposition_id,Discharged/transferred to SNF,0.5957450353192056,111
+race,?,admission_source_id, Transfer from another health care facility,4.607031001485598,226
+race,?,admission_source_id,Transfer from a hospital,2.4589409827803173,173
+race,AfricanAmerican,admission_source_id, Transfer from another health care facility,1.5869273629356826,515
+race,AfricanAmerican,admission_source_id,Clinic Referral,1.6421132619625556,274
+race,AfricanAmerican,admission_source_id,NULL,0.48891410631633486,436
+race,?,payer_code,?,0.6149871864164571,520
+race,?,payer_code,SP,2.5119221663459075,229
+race,?,payer_code,UN,2.7159040863406525,139
+race,AfricanAmerican,payer_code,DM,1.8399821733048562,124
+race,AfricanAmerican,payer_code,MD,1.7101025089801452,677
+race,AfricanAmerican,payer_code,SP,0.5736987700934434,346
+race,Hispanic,payer_code,MC,0.46650149421800646,202
+race,Hispanic,payer_code,MD,2.8754414016356584,134
+race,Other,payer_code,MC,0.5591132820563405,188
+race,AfricanAmerican,medical_specialty,Emergency/Trauma,0.5568267404211523,448
+race,AfricanAmerican,medical_specialty,Nephrology,2.24531874798743,335
+race,AfricanAmerican,medical_specialty,Orthopedics,0.6068371541587444,124
+race,AfricanAmerican,medical_specialty,Surgery-Vascular,1.9469674137327135,127
+race,Hispanic,medical_specialty,Emergency/Trauma,1.7210596443000235,163
+race,Hispanic,medical_specialty,Family/GeneralPractice,1.5567404249816397,169
+race,Other,medical_specialty,Emergency/Trauma,2.3387136699893727,172
+race,AfricanAmerican,diag_1,250.02,1.980495463503371,187
+race,AfricanAmerican,diag_1,250.12,2.1446003264359175,114
+race,AfricanAmerican,diag_1,Acute myocardial infarction,0.5737033409795382,300
+race,AfricanAmerican,diag_1,Cardiac dysrhythmias,0.6001054314109785,222
+race,AfricanAmerican,diag_1,Chronic bronchitis,0.5075367957365308,122
+race,AfricanAmerican,diag_1,Diabetes with other specified manifestations,1.6199466403390212,155
+race,AfricanAmerican,diag_1,Hypertensive heart disease,2.4090006205311223,135
+race,AfricanAmerican,diag_1,Hypertensive renal disease,2.1305056743529915,124
+race,AfricanAmerican,diag_1,Osteoarthrosis and allied disorders,0.5206407933238102,179
+race,AfricanAmerican,diag_1,Other forms of chronic ischemic,0.6585737220966602,621
+race,Caucasian,diag_1,250.12,0.6571743892287916,145
+race,Hispanic,diag_1,Symptoms involving respiratory system and,1.7679136453526696,114
+race,AfricanAmerican,diag_2,Cardiac dysrhythmias,0.49082571432474337,313
+race,AfricanAmerican,diag_2,Cardiomyopathy,1.619686540893046,258
+race,AfricanAmerican,diag_2,Chronic airway obstruction,0.59415673824319,238
+race,AfricanAmerican,diag_2,Hypertensive renal disease,2.0301831125743646,593
+race,AfricanAmerican,diag_2,Nondependent abuse of drugs,1.8462114326587464,168
+race,AfricanAmerican,diag_2,Other and unspecified anemias,0.5978050612289478,120
+race,AfricanAmerican,diag_2,Other forms of chronic ischemic,0.5745822467712746,205
+race,AfricanAmerican,diag_2,Schizophrenic disorders,2.071606089177689,109
+race,Hispanic,diag_2,Diabetes mellitus,1.5059090078202018,160
+race,AfricanAmerican,diag_3,Cardiac dysrhythmias,0.500224666060238,244
+race,AfricanAmerican,diag_3,Chronic airway obstruction,0.6580316005695372,196
+race,AfricanAmerican,diag_3,Hypertensive renal disease,1.609944543636609,378
+race,AfricanAmerican,diag_3,Other forms of chronic ischemic,0.5905182154719921,284
+race,AfricanAmerican,max_glu_serum,Norm,0.4776972409645106,149
+race,Hispanic,A1Cresult,>8,1.5779601487707842,211
+gender,Male,age,[90-100),0.6350311954864765,565
+gender,Female,medical_specialty,ObstetricsandGynecology,1.8808152531229456,595
+gender,Female,medical_specialty,Urology,0.47197816729311654,133
+gender,Male,medical_specialty,Urology,1.5996127258488881,397
+gender,Female,diag_1,Genital prolapse,1.8808152531229454,149
+gender,Female,diag_1,Infections of kidney,1.5374918339020902,206
+gender,Female,diag_1,Malignant neoplasm of body of,1.8808152531229454,102
+gender,Female,diag_1,Malignant neoplasm of female breast,1.8808152531229454,126
+gender,Female,diag_1,Other current conditions in the,1.8808152531229454,242
+gender,Female,diag_1,Uterine leiomyoma,1.8808152531229456,116
+gender,Male,diag_1,820,0.6012581642977037,232
+gender,Male,diag_1,Asthma,0.5236241070219598,166
+gender,Male,diag_1,Hyperplasia of prostate,2.1355031352642584,165
+gender,Male,diag_1,Malignant neoplasm of prostate,2.1355031352642584,158
+gender,Female,diag_2,Diffuse diseases of connective tissue,1.6782659181712436,116
+gender,Female,diag_2,Nondependent abuse of drugs,0.6182481822146711,166
+gender,Female,diag_2,Other current conditions in the,1.8808152531229454,283
+gender,Male,diag_2,Alcohol dependence syndrome,1.703976594977698,154
+gender,Male,diag_2,Asthma,0.6212990043773596,183
+gender,Male,diag_2,Other disorders of urethra and,0.6196180348104813,654
+gender,Female,diag_3,Nondependent abuse of drugs,0.6464471096306588,243
+gender,Male,diag_3,Alcohol dependence syndrome,1.5670598546543475,102
+gender,Male,diag_3,Asthma,0.5812612084151234,138
+gender,Male,diag_3,Other disorders of urethra and,0.6557975333547292,394
+age,[90-100),admission_type_id,Elective,0.40840690862746437,151
+age,[90-100),admission_type_id,Not Available,1.5179756574801844,128
+age,[30-40),discharge_disposition_id,Discharged/transferred to home with home health service,0.4891046227359714,153
+age,[40-50),discharge_disposition_id,Discharged/transferred to SNF,0.18821662718066792,159
+age,[40-50),discharge_disposition_id,Discharged/transferred to home with home health service,0.6472927629539893,516
+age,[50-60),discharge_disposition_id,Discharged/transferred to SNF,0.3441965607289716,527
+age,[60-70),discharge_disposition_id,Discharged/transferred to SNF,0.6417572563010441,1258
+age,[80-90),discharge_disposition_id,Discharged to home,0.6429229356468829,4617
+age,[80-90),discharge_disposition_id,Discharged/transferred to ICF,2.2585895956855,198
+age,[80-90),discharge_disposition_id,Discharged/transferred to SNF,2.2867993697622633,3255
+age,[80-90),discharge_disposition_id,Discharged/transferred to another rehab fac including rehab units of a hospital .,1.5187271617925782,347
+age,[80-90),discharge_disposition_id,Expired,1.8335960852962019,320
+age,[90-100),discharge_disposition_id,Discharged to home,0.416186018671699,490
+age,[90-100),discharge_disposition_id,Discharged/transferred to SNF,3.4281468699070077,800
+age,[80-90),admission_source_id, Transfer from a Skilled Nursing Facility (SNF),1.868343992761247,165
+age,[90-100),admission_source_id, Physician Referral,0.5336487672582647,312
+age,[0-10),payer_code,?,2.10935689958336,141
+age,[10-20),payer_code,?,1.520101541395249,353
+age,[20-30),payer_code,MD,5.083631426091642,176
+age,[20-30),payer_code,SP,2.0855875117872977,110
+age,[30-40),payer_code,BC,1.6290996579066235,211
+age,[30-40),payer_code,CP,1.5210310633120243,114
+age,[30-40),payer_code,HM,1.7656523798618529,268
+age,[30-40),payer_code,MC,0.21028068373334446,162
+age,[30-40),payer_code,MD,2.8584510893715924,237
+age,[40-50),payer_code,BC,1.7602811674126009,581
+age,[40-50),payer_code,CP,1.8639057291707846,356
+age,[40-50),payer_code,DM,2.835840228396204,102
+age,[40-50),payer_code,HM,1.685616286926701,652
+age,[40-50),payer_code,MC,0.297466405852474,584
+age,[40-50),payer_code,MD,1.8884088548673856,399
+age,[40-50),payer_code,OG,2.496803605345797,158
+age,[40-50),payer_code,SP,1.5875169727930547,511
+age,[50-60),payer_code,BC,2.1413619871224556,1281
+age,[50-60),payer_code,CM,0.477370291270216,111
+age,[50-60),payer_code,CP,1.74191238234463,603
+age,[50-60),payer_code,DM,1.5646485713868996,102
+age,[50-60),payer_code,HM,1.5890273159104151,1114
+age,[50-60),payer_code,MC,0.35016938244062645,1246
+age,[50-60),payer_code,MD,1.5354493945881456,588
+age,[50-60),payer_code,OG,1.8396906454858126,211
+age,[50-60),payer_code,PO,2.0321281661497244,164
+age,[50-60),payer_code,UN,1.5144088354598055,496
+age,[70-80),payer_code,BC,0.2014052577479266,176
+age,[70-80),payer_code,CM,1.5338656042654124,521
+age,[70-80),payer_code,CP,0.3658456532354709,185
+age,[70-80),payer_code,HM,0.5878409549236475,602
+age,[70-80),payer_code,MD,0.2985326453600924,167
+age,[70-80),payer_code,SP,0.6488956070883677,553
+age,[80-90),payer_code,HM,0.3989336584757601,260
+age,[80-90),payer_code,MC,1.7246339710101175,5705
+age,[80-90),payer_code,MD,0.35673281598590284,127
+age,[80-90),payer_code,UN,0.555046441380085,169
+age,[90-100),payer_code,MC,1.89735687067183,1029
+age,[20-30),medical_specialty,ObstetricsandGynecology,17.384495164525436,163
+age,[30-40),medical_specialty,ObstetricsandGynecology,7.57084634520722,170
+age,[40-50),medical_specialty,Psychiatry,2.4386378511289837,144
+age,[60-70),medical_specialty,Surgery-Cardiovascular/Thoracic,1.6770230404986313,186
+age,[10-20),diag_1,250.13,38.45192508930827,149
+age,[20-30),diag_1,250.11,16.41939427032595,111
+age,[20-30),diag_1,250.13,12.373229231259401,101
+age,[20-30),diag_1,Other current conditions in the,31.467143810452676,120
+age,[40-50),diag_1,Affective psychoses,2.7837381769558536,170
+age,[40-50),diag_1,Asthma,1.9045229303458504,124
+age,[40-50),diag_1,Diabetes with peripheral circulatory disorders,1.853285701312556,113
+age,[40-50),diag_1,Diseases of pancreas,2.6070550505497474,173
+age,[40-50),diag_1,Heart failure,0.43107621562304105,165
+age,[40-50),diag_1,Intervertebral disc disorders,1.9850881598773429,126
+age,[40-50),diag_1,Obesity and other hyperalimentation,3.4563453063041254,119
+age,[40-50),diag_1,Other cellulitis and abscess,1.8037487167009867,255
+age,[40-50),diag_1,Pneumonia,0.6480148779388346,152
+age,[40-50),diag_1,Symptoms involving respiratory system and,1.7991416185855742,526
+age,[50-60),diag_1,Affective psychoses,1.5268670310804444,169
+age,[50-60),diag_1,Obesity and other hyperalimentation,2.0512338812967923,128
+age,[50-60),diag_1,Symptoms involving respiratory system and,1.5701385663742224,832
+age,[60-70),diag_1,Other disorders of urethra and,0.6465683246191631,144
+age,[70-80),diag_1,Malignant neoplasm of trachea,1.523127261718695,121
+age,[70-80),diag_1,Other cellulitis and abscess,0.6465519804846704,242
+age,[80-90),diag_1,38,1.542799206143757,279
+age,[80-90),diag_1,820,2.6287501036721297,351
+age,[80-90),diag_1,Disorders of fluid,1.5171713123539936,296
+age,[80-90),diag_1,Other cellulitis and abscess,0.6507044270810404,155
+age,[80-90),diag_1,Other disorders of urethra and,2.145696691510556,347
+age,[80-90),diag_1,Other forms of chronic ischemic,0.5236024059069964,444
+age,[80-90),diag_1,Pneumonia,1.5611432721454663,617
+age,[80-90),diag_1,Pneumonitis due to solids and,2.6045104877910736,157
+age,[80-90),diag_1,Symptoms involving respiratory system and,0.5582497127493857,275
+age,[90-100),diag_1,Heart failure,1.825307326104205,193
+age,[90-100),diag_1,Pneumonia,2.299514900412162,149
+age,[10-20),diag_2,Disorders of fluid,4.674682722053963,161
+age,[20-30),diag_2,Disorders of fluid,2.3293933672891205,169
+age,[20-30),diag_2,Other current conditions in the,24.44170551920261,109
+age,[30-40),diag_2,250.01,3.035734569148365,129
+age,[30-40),diag_2,250.02,1.9728906393800585,116
+age,[30-40),diag_2,Other current conditions in the,14.232121044700499,152
+age,[40-50),diag_2,250.02,1.8620440010586117,279
+age,[40-50),diag_2,Heart failure,0.41016651054311876,171
+age,[40-50),diag_2,Nondependent abuse of drugs,3.212080417114116,156
+age,[40-50),diag_2,Other cellulitis and abscess,1.5189462877481994,136
+age,[40-50),diag_2,Other disorders of urethra and,0.5074484880744464,110
+age,[50-60),diag_2,Cardiac dysrhythmias,0.45552686579607304,281
+age,[50-60),diag_2,Nondependent abuse of drugs,1.567746885389646,138
+age,[50-60),diag_2,Other disorders of urethra and,0.5446883669099026,214
+age,[50-60),diag_2,Pneumonia,0.660240905542405,103
+age,[70-80),diag_2,250.02,0.6478449609780066,257
+age,[80-90),diag_2,250.01,0.5645055709868809,103
+age,[80-90),diag_2,Cardiac dysrhythmias,1.7803876682371018,1021
+age,[80-90),diag_2,Diabetes mellitus,0.5741221242267843,466
+age,[80-90),diag_2,Other acute and subacute forms,0.5947777761454407,197
+age,[80-90),diag_2,Other diseases of endocardium,1.5279645983923749,206
+age,[80-90),diag_2,Other disorders of urethra and,1.889141885073988,690
+age,[80-90),diag_2,Pneumonia,1.5583133881049789,226
+age,[90-100),diag_2,Cardiac dysrhythmias,1.8825844350916852,177
+age,[90-100),diag_2,Disorders of fluid,1.6923757373451,207
+age,[90-100),diag_2,Heart failure,2.1360320524494627,246
+age,[90-100),diag_2,Other disorders of urethra and,2.321253911175454,139
+age,[10-20),diag_3,?,20.842934197978256,191
+age,[20-30),diag_3,?,5.491123626025388,106
+age,[30-40),diag_3,?,2.768766663390069,128
+age,[40-50),diag_3,?,1.5703224121867414,185
+age,[40-50),diag_3,Heart failure,0.4017523330241666,110
+age,[40-50),diag_3,Nondependent abuse of drugs,2.970880239272214,202
+age,[40-50),diag_3,Obesity and other hyperalimentation,2.3065510265548133,124
+age,[40-50),diag_3,Other forms of chronic ischemic,0.5376302568634242,138
+age,[50-60),diag_3,Cardiac dysrhythmias,0.48320879411874706,228
+age,[50-60),diag_3,Heart failure,0.6609591436089375,328
+age,[50-60),diag_3,Nondependent abuse of drugs,1.6797288057746211,207
+age,[50-60),diag_3,Obesity and other hyperalimentation,1.7447184427510452,170
+age,[50-60),diag_3,Other disorders of urethra and,0.5410618988090319,121
+age,[60-70),diag_3,?,0.5304132780931922,145
+age,[60-70),diag_3,Nondependent abuse of drugs,0.64649211430273,102
+age,[70-80),diag_3,?,0.40075535980454785,125
+age,[80-90),diag_3,Cardiac dysrhythmias,1.8465716394184606,810
+age,[80-90),diag_3,Disorders of lipoid metabolism,0.6235440759674706,165
+age,[80-90),diag_3,Heart failure,1.5650172488033616,722
+age,[80-90),diag_3,Other diseases of endocardium,1.6182937720654715,209
+age,[80-90),diag_3,Other disorders of urethra and,1.7364006653714614,361
+age,[90-100),diag_3,Cardiac dysrhythmias,1.8910909338362527,136
+age,[90-100),diag_3,Disorders of fluid,1.7248510196605205,158
+age,[90-100),diag_3,Heart failure,1.771654742757843,134
+age,[10-20),A1Cresult,>8,4.686381588310642,221
+age,[10-20),A1Cresult,None,0.616640406302232,270
+age,[20-30),A1Cresult,>8,2.436074727838609,242
+age,[30-40),A1Cresult,>8,1.8620871285285212,443
+age,[40-50),A1Cresult,>8,1.6444934319385138,997
+age,[70-80),A1Cresult,>8,0.6298546881141338,1011
+age,[80-90),A1Cresult,>8,0.5090454233469249,520
+admission_type_id,Elective,discharge_disposition_id,Discharged/transferred to another rehab fac including rehab units of a hospital .,1.5890483448733808,436
+admission_type_id,Elective,discharge_disposition_id,Discharged/transferred to another short term hospital,0.5409363028178336,162
+admission_type_id,Elective,discharge_disposition_id,NULL,1.5370987101088802,740
+admission_type_id,NULL,discharge_disposition_id,Not Mapped,15.247442753309741,761
+admission_type_id,Not Available,discharge_disposition_id,Discharged/transferred to SNF,2.265044897464944,883
+admission_type_id,Not Available,discharge_disposition_id,Discharged/transferred to home with home health service,1.614703340866035,594
+admission_type_id,Urgent,discharge_disposition_id,Discharged/transferred to ICF,1.6336771021266863,161
+admission_type_id,Elective,admission_source_id, Emergency Room,0.0755601414369596,563
+admission_type_id,Elective,admission_source_id, Physician Referral,2.8114824517791526,12040
+admission_type_id,Elective,admission_source_id,Clinic Referral,1.5927244380484056,287
+admission_type_id,Elective,admission_source_id,Transfer from a hospital,1.5398779073246343,774
+admission_type_id,Emergency,admission_source_id, Emergency Room,1.6568072893678016,32368
+admission_type_id,Emergency,admission_source_id, Physician Referral,0.10989952460752574,1234
+admission_type_id,Emergency,admission_source_id, Transfer from another health care facility,1.7444611706690158,1603
+admission_type_id,Emergency,admission_source_id,Clinic Referral,0.43389472662411727,205
+admission_type_id,Emergency,admission_source_id,NULL,0.1667270782424689,421
+admission_type_id,Emergency,admission_source_id,Transfer from a hospital,0.15403277134991136,203
+admission_type_id,NULL,admission_source_id, Emergency Room,0.5748324572055185,1412
+admission_type_id,NULL,admission_source_id, Physician Referral,0.3895774384856305,550
+admission_type_id,NULL,admission_source_id,NULL,8.003485508595698,2541
+admission_type_id,Not Available,admission_source_id,NULL,8.400156072086512,1845
+admission_type_id,Not Mapped,admission_source_id, Physician Referral,1.8538287645745957,166
+admission_type_id,Urgent,admission_source_id, Emergency Room,0.5360529740351516,3739
+admission_type_id,Urgent,admission_source_id, Not Mapped,4.002067011994018,113
+admission_type_id,Urgent,admission_source_id, Physician Referral,1.68825139638281,6768
+admission_type_id,Urgent,admission_source_id, Transfer from another health care facility,0.4084404035079614,134
+admission_type_id,Urgent,admission_source_id,Clinic Referral,2.359444121350857,398
+admission_type_id,Urgent,admission_source_id,NULL,0.14087173976525558,127
+admission_type_id,Urgent,admission_source_id,Transfer from a hospital,3.306913213875329,1556
+admission_type_id,Elective,payer_code,PO,1.7203643755923541,155
+admission_type_id,Elective,payer_code,SP,1.567616274030946,1021
+admission_type_id,NULL,payer_code,?,2.302330181767445,4585
+admission_type_id,Not Available,payer_code,HM,2.190499354996793,391
+admission_type_id,Not Mapped,payer_code,?,2.3038366137293433,291
+admission_type_id,Urgent,payer_code,CM,0.6131518597471297,149
+admission_type_id,Urgent,payer_code,UN,2.1268761939527474,728
+admission_type_id,Elective,medical_specialty,Cardiology,1.5334770694157225,1273
+admission_type_id,Elective,medical_specialty,Emergency/Trauma,0.6330105671272521,550
+admission_type_id,Elective,medical_specialty,InternalMedicine,0.32238693933391815,685
+admission_type_id,Elective,medical_specialty,ObstetricsandGynecology,3.368351263764829,390
+admission_type_id,Elective,medical_specialty,Orthopedics,4.246159170663973,937
+admission_type_id,Elective,medical_specialty,Orthopedics-Reconstructive,1.9757400245297576,401
+admission_type_id,Elective,medical_specialty,PhysicalMedicineandRehabilitation,3.125719564220575,118
+admission_type_id,Elective,medical_specialty,Radiologist,3.475401830017345,562
+admission_type_id,Elective,medical_specialty,Surgery-Cardiovascular/Thoracic,2.698695297458387,261
+admission_type_id,Elective,medical_specialty,Surgery-General,2.0152982609933203,871
+admission_type_id,Elective,medical_specialty,Surgery-Neuro,3.103440182303292,247
+admission_type_id,Elective,medical_specialty,Surgery-Vascular,3.619939761260227,255
+admission_type_id,Elective,medical_specialty,Urology,2.9960726734372654,309
+admission_type_id,Emergency,medical_specialty,Cardiology,0.5871532920989857,1278
+admission_type_id,Emergency,medical_specialty,Orthopedics-Reconstructive,0.23113318323332657,123
+admission_type_id,Emergency,medical_specialty,Surgery-General,0.35474721291284067,402
+admission_type_id,NULL,medical_specialty,?,0.5131665553971401,1135
+admission_type_id,NULL,medical_specialty,Cardiology,2.7259000527681625,746
+admission_type_id,NULL,medical_specialty,Family/GeneralPractice,1.8061190089987884,593
+admission_type_id,NULL,medical_specialty,InternalMedicine,1.6503152763238025,1156
+admission_type_id,NULL,medical_specialty,Orthopedics-Reconstructive,3.377661179566354,226
+admission_type_id,NULL,medical_specialty,Pulmonology,3.2942598776220273,138
+admission_type_id,NULL,medical_specialty,Surgery-General,1.5440667606939702,220
+admission_type_id,Not Available,medical_specialty,Cardiology,0.633824224070928,120
+admission_type_id,Not Available,medical_specialty,Family/GeneralPractice,1.8755029692452823,426
+admission_type_id,Not Available,medical_specialty,Orthopedics-Reconstructive,2.7652480816992813,128
+admission_type_id,Urgent,medical_specialty,Emergency/Trauma,2.900307787413516,2359
+admission_type_id,Urgent,medical_specialty,Gastroenterology,2.013758537853529,146
+admission_type_id,Urgent,medical_specialty,Oncology,2.870687833966643,114
+admission_type_id,Urgent,medical_specialty,Psychiatry,1.5288516640180654,171
+admission_type_id,Urgent,medical_specialty,Surgery-Cardiovascular/Thoracic,1.7783084753531933,161
+admission_type_id,Elective,diag_1,250.8,0.5404372840882967,114
+admission_type_id,Elective,diag_1,996,1.7997551835085788,394
+admission_type_id,Elective,diag_1,Acute myocardial infarction,0.5843677840571703,330
+admission_type_id,Elective,diag_1,Atherosclerosis,2.682620490320088,320
+admission_type_id,Elective,diag_1,Chronic bronchitis,0.40063348364619156,104
+admission_type_id,Elective,diag_1,Diabetes with other specified manifestations,1.5968317413690285,165
+admission_type_id,Elective,diag_1,Disorders of fluid,0.45669580715475727,107
+admission_type_id,Elective,diag_1,Genital prolapse,3.9317719191390186,114
+admission_type_id,Elective,diag_1,Heart failure,0.47902763801041565,371
+admission_type_id,Elective,diag_1,Intervertebral disc disorders,2.9743300650392697,382
+admission_type_id,Elective,diag_1,Malignant neoplasm of colon,2.8283840019428585,142
+admission_type_id,Elective,diag_1,Malignant neoplasm of prostate,3.935482785374049,121
+admission_type_id,Elective,diag_1,Malignant neoplasm of trachea,1.795319043486752,109
+admission_type_id,Elective,diag_1,Obesity and other hyperalimentation,1.5933445008977807,111
+admission_type_id,Elective,diag_1,Occlusion and stenosis of precerebral,2.3775731166871497,285
+admission_type_id,Elective,diag_1,Osteoarthrosis and allied disorders,3.7383574889706255,1388
+admission_type_id,Elective,diag_1,Other and unspecified disorders or,2.7810489921340382,184
+admission_type_id,Elective,diag_1,Other cellulitis and abscess,0.6012856590505714,172
+admission_type_id,Elective,diag_1,Other current conditions in the,3.0153845971126345,142
+admission_type_id,Elective,diag_1,Other forms of chronic ischemic,1.92475328845176,1960
+admission_type_id,Elective,diag_1,Other hernia of abdominal cavity,1.7986132068692966,105
+admission_type_id,Elective,diag_1,Pneumonia,0.3645054586638415,173
+admission_type_id,Elective,diag_1,Symptoms involving respiratory system and,0.2806107070867511,166
+admission_type_id,Elective,diag_1,V57,2.9788434642274932,382
+admission_type_id,Emergency,diag_1,250.12,1.5745912276871772,237
+admission_type_id,Emergency,diag_1,250.13,1.521030038377257,402
+admission_type_id,Emergency,diag_1,Diabetes with ketoacidosis,1.5165101949458666,171
+admission_type_id,Emergency,diag_1,Diabetes with other specified manifestations,0.5868729610929705,159
+admission_type_id,Emergency,diag_1,Intracerebral hemorrhage,1.584056431298498,118
+admission_type_id,Emergency,diag_1,Occlusion and stenosis of precerebral,0.4454395973990383,140
+admission_type_id,Emergency,diag_1,Other forms of chronic ischemic,0.6243474792666667,1667
+admission_type_id,Emergency,diag_1,Other hernia of abdominal cavity,0.6598445236137755,101
+admission_type_id,NULL,diag_1,V57,2.6019516506079725,110
+admission_type_id,Not Available,diag_1,Obesity and other hyperalimentation,10.762707121056911,171
+admission_type_id,Not Available,diag_1,Osteoarthrosis and allied disorders,1.6060866659004835,136
+admission_type_id,Urgent,diag_1,38,0.5951943319214309,121
+admission_type_id,Urgent,diag_1,998,1.5495697198896299,129
+admission_type_id,Urgent,diag_1,Diabetes with other specified manifestations,1.6851194616607312,163
+admission_type_id,Urgent,diag_1,Osteoarthrosis and allied disorders,0.4833575675419947,168
+admission_type_id,Urgent,diag_1,Other venous embolism and thrombosis,1.6243084441939597,108
+admission_type_id,Elective,diag_2,996,1.8702207584308377,111
+admission_type_id,Elective,diag_2,997,2.818103642099359,170
+admission_type_id,Elective,diag_2,998,2.5220843519628713,213
+admission_type_id,Elective,diag_2,Acute renal failure,0.6068423190936708,126
+admission_type_id,Elective,diag_2,Angina pectoris,1.7698530940903288,280
+admission_type_id,Elective,diag_2,Atherosclerosis,1.99738178229151,103
+admission_type_id,Elective,diag_2,Disorders of fluid,0.45540163112987025,408
+admission_type_id,Elective,diag_2,General symptoms,0.6331589676248854,129
+admission_type_id,Elective,diag_2,Other and unspecified anemias,1.5822629647503685,343
+admission_type_id,Elective,diag_2,Other current conditions in the,3.3048723235760926,182
+admission_type_id,Elective,diag_2,Other disorders of urethra and,0.508417727382245,223
+admission_type_id,Emergency,diag_2,998,0.4786936134260633,106
+admission_type_id,NULL,diag_2,250.01,1.633561797631012,118
+admission_type_id,Not Available,diag_2,Other and unspecified anemias,2.2249278529886567,110
+admission_type_id,Urgent,diag_2,Other cellulitis and abscess,1.5153782631938413,257
+admission_type_id,Elective,diag_3,250.02,0.5884230774926815,105
+admission_type_id,Elective,diag_3,997,2.6623190325431927,129
+admission_type_id,Elective,diag_3,998,2.202383518615465,102
+admission_type_id,Elective,diag_3,Disorders of fluid,0.4620236113104756,310
+admission_type_id,Elective,diag_3,Other disorders of urethra and,0.5647577378211129,141
+admission_type_id,Elective,diag_3,V58,1.5209947480093395,103
+admission_type_id,Emergency,max_glu_serum,>300,0.3992458613724714,154
+admission_type_id,Emergency,max_glu_serum,Norm,0.26268327037835837,232
+admission_type_id,NULL,max_glu_serum,>200,5.7268811805913575,356
+admission_type_id,NULL,max_glu_serum,>300,5.031065627839822,244
+admission_type_id,NULL,max_glu_serum,Norm,4.925861653009862,547
+admission_type_id,Not Available,max_glu_serum,>200,11.324358841802233,487
+admission_type_id,Not Available,max_glu_serum,>300,9.865398592399224,331
+admission_type_id,Not Available,max_glu_serum,None,0.49228284334030514,1487
+admission_type_id,Not Available,max_glu_serum,Norm,11.311785131722688,869
+admission_type_id,Elective,A1Cresult,>7,0.6132544906556381,345
+admission_type_id,Elective,A1Cresult,>8,0.5339429162887007,655
+admission_type_id,Elective,A1Cresult,Norm,0.6005092140355718,443
+admission_type_id,Not Available,A1Cresult,>8,0.6076327249639362,170
+discharge_disposition_id,Discharged/transferred to ICF,admission_source_id, Physician Referral,0.6127134644690017,102
+discharge_disposition_id,Discharged/transferred to SNF,admission_source_id, Transfer from a Skilled Nursing Facility (SNF),5.602189552313631,375
+discharge_disposition_id,Discharged/transferred to SNF,admission_source_id,Transfer from a hospital,0.4854218806304639,154
+discharge_disposition_id,Discharged/transferred to another short term hospital,admission_source_id, Physician Referral,0.6018118814047382,285
+discharge_disposition_id,Expired,admission_source_id, Physician Referral,0.47373826653197515,157
+discharge_disposition_id,NULL,admission_source_id,Transfer from a hospital,3.950626429696564,353
+discharge_disposition_id,Not Mapped,admission_source_id,NULL,4.346444790851258,234
+discharge_disposition_id,Discharged/transferred to SNF,payer_code,BC,0.27756302781917536,117
+discharge_disposition_id,Discharged/transferred to SNF,payer_code,CP,0.4181614195543669,102
+discharge_disposition_id,Discharged/transferred to SNF,payer_code,HM,0.5769335933784948,285
+discharge_disposition_id,Discharged/transferred to SNF,payer_code,MC,1.7748225350901192,4450
+discharge_disposition_id,Discharged/transferred to SNF,payer_code,UN,0.5806321135433238,134
+discharge_disposition_id,Discharged/transferred to a long term care hospital.,payer_code,MC,1.792113632424204,133
+discharge_disposition_id,Discharged/transferred to another rehab fac including rehab units of a hospital .,payer_code,MC,1.520616014458163,612
+discharge_disposition_id,Discharged/transferred to another short term hospital,payer_code,HM,1.998852639268946,173
+discharge_disposition_id,Discharged/transferred to another type of inpatient care institution,payer_code,?,1.5972930739218776,633
+discharge_disposition_id,Discharged/transferred to another type of inpatient care institution,payer_code,MC,0.514187211898799,134
+discharge_disposition_id,Discharged/transferred to home with home health service,payer_code,MD,0.647988216748697,165
+discharge_disposition_id,Discharged/transferred to home with home health service,payer_code,UN,0.5510204120942038,120
+discharge_disposition_id,Hospice / home,payer_code,MC,1.7012298104141395,118
+discharge_disposition_id,Hospice / medical facility,payer_code,MC,1.7034783648206886,106
+discharge_disposition_id,NULL,payer_code,?,2.2861434465260864,2455
+discharge_disposition_id,Not Mapped,payer_code,?,2.300875384148714,777
+discharge_disposition_id,Discharged to home,medical_specialty,Orthopedics,0.43261894753045627,304
+discharge_disposition_id,Discharged/transferred to ICF,medical_specialty,InternalMedicine,1.6707609503622627,138
+discharge_disposition_id,Discharged/transferred to SNF,medical_specialty,Cardiology,0.30918413225427127,162
+discharge_disposition_id,Discharged/transferred to SNF,medical_specialty,Orthopedics,1.9887937584127626,277
+discharge_disposition_id,Discharged/transferred to SNF,medical_specialty,Orthopedics-Reconstructive,1.72516643177607,221
+discharge_disposition_id,Discharged/transferred to another rehab fac including rehab units of a hospital .,medical_specialty,Emergency/Trauma,1.522227569829962,134
+discharge_disposition_id,Discharged/transferred to another rehab fac including rehab units of a hospital .,medical_specialty,Orthopedics,6.172516792374949,138
+discharge_disposition_id,Discharged/transferred to another short term hospital,medical_specialty,Emergency/Trauma,1.9150190602382111,184
+discharge_disposition_id,Discharged/transferred to home with home health service,medical_specialty,Emergency/Trauma,0.5159445382694615,267
+discharge_disposition_id,NULL,medical_specialty,?,1.5863803758057022,1892
+discharge_disposition_id,NULL,medical_specialty,Orthopedics,4.410102811746574,173
+discharge_disposition_id,Not Mapped,medical_specialty,?,0.3146214312391712,118
+discharge_disposition_id,Not Mapped,medical_specialty,Cardiology,2.305678184774212,107
+discharge_disposition_id,Not Mapped,medical_specialty,Family/GeneralPractice,2.1912670739192586,122
+discharge_disposition_id,Discharged to home,diag_1,38,0.6333662583910977,438
+discharge_disposition_id,Discharged to home,diag_1,Diabetes with other specified manifestations,0.5652797532517715,186
+discharge_disposition_id,Discharged to home,diag_1,Occlusion of cerebral arteries,0.5991716255851319,587
+discharge_disposition_id,Discharged to home,diag_1,Osteoarthrosis and allied disorders,0.35523514621573593,420
+discharge_disposition_id,Discharged to home,diag_1,Uterine leiomyoma,1.5163990933657436,109
+discharge_disposition_id,Discharged to home,diag_1,V57,0.5411926209787445,221
+discharge_disposition_id,Discharged/transferred to SNF,diag_1,38,2.115713402014742,290
+discharge_disposition_id,Discharged/transferred to SNF,diag_1,820,4.387112711549685,444
+discharge_disposition_id,Discharged/transferred to SNF,diag_1,Acute myocardial infarction,0.653704608592278,233
+discharge_disposition_id,Discharged/transferred to SNF,diag_1,Acute renal failure,1.6655703185438644,197
+discharge_disposition_id,Discharged/transferred to SNF,diag_1,Cardiac dysrhythmias,0.5671136778822053,143
+discharge_disposition_id,Discharged/transferred to SNF,diag_1,Diabetes with other specified manifestations,1.9319641258374243,126
+discharge_disposition_id,Discharged/transferred to SNF,diag_1,Disorders of fluid,1.5282872362313844,226
+discharge_disposition_id,Discharged/transferred to SNF,diag_1,Occlusion of cerebral arteries,1.5552424683370032,302
+discharge_disposition_id,Discharged/transferred to SNF,diag_1,Osteoarthrosis and allied disorders,2.3512362146918555,551
+discharge_disposition_id,Discharged/transferred to SNF,diag_1,Other disorders of urethra and,2.708510828578834,332
+discharge_disposition_id,Discharged/transferred to SNF,diag_1,Pneumonia,1.5255534681940628,457
+discharge_disposition_id,Discharged/transferred to SNF,diag_1,Pneumonitis due to solids and,4.158471169477251,190
+discharge_disposition_id,Discharged/transferred to another rehab fac including rehab units of a hospital .,diag_1,820,11.141601253184604,181
+discharge_disposition_id,Discharged/transferred to another rehab fac including rehab units of a hospital .,diag_1,Occlusion of cerebral arteries,8.630116498669931,269
+discharge_disposition_id,Discharged/transferred to another rehab fac including rehab units of a hospital .,diag_1,Osteoarthrosis and allied disorders,5.316770001635518,200
+discharge_disposition_id,Discharged/transferred to another short term hospital,diag_1,Acute myocardial infarction,4.819986574650629,301
+discharge_disposition_id,Discharged/transferred to another short term hospital,diag_1,Other forms of chronic ischemic,2.4864746602973304,280
+discharge_disposition_id,Discharged/transferred to home with home health service,diag_1,250.8,1.8147582778759381,228
+discharge_disposition_id,Discharged/transferred to home with home health service,diag_1,998,2.3788527834600863,126
+discharge_disposition_id,Discharged/transferred to home with home health service,diag_1,Osteoarthrosis and allied disorders,2.419293914063067,535
+discharge_disposition_id,Discharged/transferred to home with home health service,diag_1,Other cellulitis and abscess,1.7784371222249304,303
+discharge_disposition_id,Discharged/transferred to home with home health service,diag_1,Symptoms involving respiratory system and,0.2866559835165184,101
+discharge_disposition_id,Discharged/transferred to home with home health service,diag_1,V57,3.587388152314776,274
+discharge_disposition_id,Expired,diag_1,38,6.188263562331313,104
+discharge_disposition_id,Expired,diag_1,Acute myocardial infarction,2.5170679203725284,110
+discharge_disposition_id,NULL,diag_1,Acute myocardial infarction,1.9125794548626183,192
+discharge_disposition_id,NULL,diag_1,Other forms of chronic ischemic,1.966594991890436,356
+discharge_disposition_id,NULL,diag_1,Symptoms involving respiratory system and,1.5785202952814537,166
+discharge_disposition_id,Discharged to home,diag_2,38,0.6635064025186298,118
+discharge_disposition_id,Discharged to home,diag_2,Chronic ulcer of skin,0.6125403756401048,457
+discharge_disposition_id,Discharged to home,diag_2,Other current conditions in the,1.5567584040168045,273
+discharge_disposition_id,Discharged/transferred to SNF,diag_2,Chronic ulcer of skin,1.8596415485116398,275
+discharge_disposition_id,Discharged/transferred to SNF,diag_2,Diabetes mellitus,0.46975330561637496,289
+discharge_disposition_id,Discharged/transferred to SNF,diag_2,Essential hypertension,0.522048596364563,198
+discharge_disposition_id,Discharged/transferred to SNF,diag_2,Other and unspecified anemias,2.199907085839113,301
+discharge_disposition_id,Discharged/transferred to SNF,diag_2,Other disorders of urethra and,2.207040650662736,611
+discharge_disposition_id,Discharged/transferred to SNF,diag_2,Pneumonia,1.7648253299549206,194
+discharge_disposition_id,Discharged/transferred to another short term hospital,diag_2,Heart failure,1.6079735414404268,150
+discharge_disposition_id,Discharged/transferred to another short term hospital,diag_2,Other acute and subacute forms,4.387864002980563,193
+discharge_disposition_id,Discharged/transferred to home with home health service,diag_2,Chronic ulcer of skin,2.1140183383574036,295
+discharge_disposition_id,Discharged/transferred to home with home health service,diag_2,Other cellulitis and abscess,1.9461792374530245,210
+discharge_disposition_id,Discharged/transferred to home with home health service,diag_2,Other forms of chronic ischemic,0.5316280186348953,122
+discharge_disposition_id,Expired,diag_2,Other diseases of lung,8.244391766276612,110
+discharge_disposition_id,NULL,diag_2,Other acute and subacute forms,1.5274201994282615,108
+discharge_disposition_id,NULL,diag_2,Other forms of chronic ischemic,1.8249899969786794,125
+discharge_disposition_id,Discharged to home,diag_3,Chronic ulcer of skin,0.5216881861568236,257
+discharge_disposition_id,Discharged/transferred to SNF,diag_3,Acute renal failure,1.6528565265623072,135
+discharge_disposition_id,Discharged/transferred to SNF,diag_3,Chronic airway obstruction,1.5072025031487706,306
+discharge_disposition_id,Discharged/transferred to SNF,diag_3,Chronic ulcer of skin,2.253090238398002,220
+discharge_disposition_id,Discharged/transferred to SNF,diag_3,Diabetes mellitus,0.6242174166952315,693
+discharge_disposition_id,Discharged/transferred to SNF,diag_3,Essential hypertension,0.6253454008668408,506
+discharge_disposition_id,Discharged/transferred to SNF,diag_3,Other and unspecified anemias,1.6264562852232132,170
+discharge_disposition_id,Discharged/transferred to SNF,diag_3,Other disorders of urethra and,2.31627031788826,365
+discharge_disposition_id,Discharged/transferred to SNF,diag_3,Other forms of chronic ischemic,0.4514775664190009,148
+discharge_disposition_id,Discharged/transferred to home with home health service,diag_3,Chronic ulcer of skin,1.8015826081546282,166
+discharge_disposition_id,Discharged/transferred to home with home health service,diag_3,Other cellulitis and abscess,1.97167762478102,125
+discharge_disposition_id,Expired,diag_3,Disorders of fluid,2.0029298537012026,104
+discharge_disposition_id,Discharged to home,max_glu_serum,>200,0.6511754033638828,391
+discharge_disposition_id,Discharged/transferred to SNF,max_glu_serum,>200,2.108982510653576,251
+discharge_disposition_id,Discharged/transferred to SNF,max_glu_serum,>300,1.636985476238664,152
+discharge_disposition_id,Discharged/transferred to SNF,max_glu_serum,Norm,1.8814208702551458,400
+discharge_disposition_id,Discharged/transferred to SNF,A1Cresult,>8,0.5760254714386102,446
+discharge_disposition_id,NULL,diabetesMed,No,1.595066087155243,949
+discharge_disposition_id,Discharged/transferred to SNF,readmitted,<30,1.5215023371444898,1176
+discharge_disposition_id,Discharged/transferred to another rehab fac including rehab units of a hospital .,readmitted,<30,2.990283924612848,371
+discharge_disposition_id,Discharged/transferred to another short term hospital,readmitted,<30,1.5655064823926912,212
+discharge_disposition_id,Discharged/transferred to another type of inpatient care institution,readmitted,<30,2.3401554152991495,188
+discharge_disposition_id,Expired,readmitted,NO,1.66378969407933,1077
+discharge_disposition_id,Hospice / home,readmitted,NO,1.5200053995292644,222
+discharge_disposition_id,Hospice / medical facility,readmitted,NO,1.5645728774599206,205
+admission_source_id, Not Mapped,payer_code,?,2.3038366137293433,155
+admission_source_id, Physician Referral,payer_code,OG,0.6222990943887294,126
+admission_source_id, Transfer from a Skilled Nursing Facility (SNF),payer_code,MC,1.600626840906987,249
+admission_source_id, Transfer from another health care facility,payer_code,HM,2.39919670021434,243
+admission_source_id, Transfer from another health care facility,payer_code,MC,1.634002902821098,840
+admission_source_id, Transfer from another health care facility,payer_code,MD,2.1147423029283536,117
+admission_source_id, Transfer from another health care facility,payer_code,UN,7.14317957707252,338
+admission_source_id,Clinic Referral,payer_code,?,2.201830888931392,885
+admission_source_id,HMO Referral,payer_code,?,1.9031693765590225,114
+admission_source_id,NULL,payer_code,?,1.8746312474213103,4027
+admission_source_id,NULL,payer_code,HM,0.6108080642343048,170
+admission_source_id,NULL,payer_code,MC,0.41341158606856265,584
+admission_source_id,Transfer from a hospital,payer_code,MC,0.6632415161784055,489
+admission_source_id, Emergency Room,medical_specialty,Cardiology,0.5424759010277257,1239
+admission_source_id, Emergency Room,medical_specialty,Emergency/Trauma,1.7540153663165265,4193
+admission_source_id, Emergency Room,medical_specialty,Orthopedics-Reconstructive,0.20415054209848793,114
+admission_source_id, Emergency Room,medical_specialty,Surgery-General,0.5693379125560061,677
+admission_source_id, Not Mapped,medical_specialty,?,2.0743684195260608,155
+admission_source_id, Physician Referral,medical_specialty,Emergency/Trauma,0.16594642517032784,228
+admission_source_id, Physician Referral,medical_specialty,Gastroenterology,1.6820490876247005,206
+admission_source_id, Physician Referral,medical_specialty,Neurology,2.4953699796817896,129
+admission_source_id, Physician Referral,medical_specialty,ObstetricsandGynecology,2.872918433515997,526
+admission_source_id, Physician Referral,medical_specialty,Oncology,2.236090018063477,150
+admission_source_id, Physician Referral,medical_specialty,Orthopedics,2.8113212174192768,981
+admission_source_id, Physician Referral,medical_specialty,Orthopedics-Reconstructive,1.8196298650028595,584
+admission_source_id, Physician Referral,medical_specialty,Radiologist,2.616252229558071,669
+admission_source_id, Physician Referral,medical_specialty,Surgery-Cardiovascular/Thoracic,2.6416756548744003,404
+admission_source_id, Physician Referral,medical_specialty,Surgery-General,1.6724463279632262,1143
+admission_source_id, Physician Referral,medical_specialty,Surgery-Neuro,2.6459122864107583,333
+admission_source_id, Physician Referral,medical_specialty,Surgery-Vascular,3.034328856187647,338
+admission_source_id, Physician Referral,medical_specialty,Urology,2.4771939631558055,404
+admission_source_id, Transfer from a Skilled Nursing Facility (SNF),medical_specialty,InternalMedicine,2.091150263281495,174
+admission_source_id, Transfer from another health care facility,medical_specialty,?,0.35705397559860014,310
+admission_source_id, Transfer from another health care facility,medical_specialty,Family/GeneralPractice,2.335435417647137,301
+admission_source_id, Transfer from another health care facility,medical_specialty,InternalMedicine,3.2476576419395173,893
+admission_source_id,Clinic Referral,medical_specialty,?,1.7697095587749332,790
+admission_source_id,NULL,medical_specialty,Cardiology,2.5575492622025484,755
+admission_source_id,NULL,medical_specialty,Family/GeneralPractice,2.922388669232739,1035
+admission_source_id,NULL,medical_specialty,InternalMedicine,0.5029196883215669,380
+admission_source_id,NULL,medical_specialty,Orthopedics-Reconstructive,4.461382612716826,322
+admission_source_id,NULL,medical_specialty,Surgery-General,1.9454520758290166,299
+admission_source_id,Transfer from a hospital,medical_specialty,Cardiology,2.0834118789248977,321
+admission_source_id,Transfer from a hospital,medical_specialty,InternalMedicine,0.585760481654638,231
+admission_source_id,Transfer from a hospital,medical_specialty,PhysicalMedicineandRehabilitation,18.12562312662891,127
+admission_source_id, Emergency Room,diag_1,250.12,1.5638854239058746,247
+admission_source_id, Emergency Room,diag_1,805,1.5023595671477399,111
+admission_source_id, Emergency Room,diag_1,996,0.6491637038971592,391
+admission_source_id, Emergency Room,diag_1,Diabetes with other specified manifestations,0.6014943938099517,171
+admission_source_id, Emergency Room,diag_1,Intervertebral disc disorders,0.3169597252229794,112
+admission_source_id, Emergency Room,diag_1,Intracerebral hemorrhage,1.5223836117302345,119
+admission_source_id, Emergency Room,diag_1,Occlusion and stenosis of precerebral,0.45482103428042314,150
+admission_source_id, Emergency Room,diag_1,Other forms of chronic ischemic,0.6153419469638332,1724
+admission_source_id, Physician Referral,diag_1,38,0.4717428618753271,162
+admission_source_id, Physician Referral,diag_1,820,0.4062230199481984,103
+admission_source_id, Physician Referral,diag_1,996,1.5541190025395963,538
+admission_source_id, Physician Referral,diag_1,Acute myocardial infarction,0.42889983911829077,383
+admission_source_id, Physician Referral,diag_1,Atherosclerosis,2.295524536868775,433
+admission_source_id, Physician Referral,diag_1,Chronic bronchitis,0.5408186532443781,222
+admission_source_id, Physician Referral,diag_1,Diabetes with other specified manifestations,1.7442344359357669,285
+admission_source_id, Physician Referral,diag_1,General symptoms,0.400219724086895,175
+admission_source_id, Physician Referral,diag_1,Genital prolapse,2.9008140484891483,133
+admission_source_id, Physician Referral,diag_1,Heart failure,0.6466907171838655,792
+admission_source_id, Physician Referral,diag_1,Hyperplasia of prostate,2.383175050362764,121
+admission_source_id, Physician Referral,diag_1,Intervertebral disc disorders,2.4127185427226325,490
+admission_source_id, Physician Referral,diag_1,Malignant neoplasm of colon,2.3302715872997424,185
+admission_source_id, Physician Referral,diag_1,Malignant neoplasm of female breast,2.8113212174192777,109
+admission_source_id, Physician Referral,diag_1,Malignant neoplasm of prostate,2.5916000259986327,126
+admission_source_id, Physician Referral,diag_1,Malignant neoplasm of trachea,1.520732331088127,146
+admission_source_id, Physician Referral,diag_1,Obesity and other hyperalimentation,2.151393424083196,237
+admission_source_id, Physician Referral,diag_1,Occlusion and stenosis of precerebral,2.0258394761053005,384
+admission_source_id, Physician Referral,diag_1,Occlusion of cerebral arteries,0.3823275481865396,186
+admission_source_id, Physician Referral,diag_1,Osteoarthrosis and allied disorders,2.7473280133184232,1613
+admission_source_id, Physician Referral,diag_1,Other and unspecified disorders or,2.198383402072603,230
+admission_source_id, Physician Referral,diag_1,Other current conditions in the,2.914062655496167,217
+admission_source_id, Physician Referral,diag_1,Other diseases of lung,0.6068874032961036,124
+admission_source_id, Physician Referral,diag_1,Other disorders of urethra and,0.439600061667389,135
+admission_source_id, Physician Referral,diag_1,Other hernia of abdominal cavity,1.646557307523364,152
+admission_source_id, Physician Referral,diag_1,Pneumonia,0.5836020753991337,438
+admission_source_id, Physician Referral,diag_1,Spondylosis and allied disorders,2.2028738262962704,101
+admission_source_id, Physician Referral,diag_1,Symptoms involving respiratory system and,0.4297411947873046,402
+admission_source_id, Physician Referral,diag_1,Uterine leiomyoma,2.85756882998043,102
+admission_source_id, Physician Referral,diag_1,V57,1.5287300295470894,310
+admission_source_id,Clinic Referral,diag_1,Other forms of chronic ischemic,1.8891376746424398,128
+admission_source_id,NULL,diag_1,Obesity and other hyperalimentation,4.561349225790211,113
+admission_source_id,NULL,diag_1,Osteoarthrosis and allied disorders,1.5980927896409203,211
+admission_source_id,Transfer from a hospital,diag_1,Acute myocardial infarction,4.980397995375051,522
+admission_source_id,Transfer from a hospital,diag_1,Other forms of chronic ischemic,2.8783202936722114,544
+admission_source_id,Transfer from a hospital,diag_1,V57,11.55415618756231,275
+admission_source_id, Emergency Room,diag_2,998,0.5035308998872299,117
+admission_source_id, Physician Referral,diag_2,996,1.534324324525654,144
+admission_source_id, Physician Referral,diag_2,997,2.1385676405014826,204
+admission_source_id, Physician Referral,diag_2,998,1.8345555739596051,245
+admission_source_id, Physician Referral,diag_2,Atherosclerosis,1.8027104583361555,147
+admission_source_id, Physician Referral,diag_2,Chronic bronchitis,0.619345502484,174
+admission_source_id, Physician Referral,diag_2,Disorders of fluid,0.6260987292685524,887
+admission_source_id, Physician Referral,diag_2,Other and unspecified anemias,1.5840509862252903,543
+admission_source_id, Physician Referral,diag_2,Other current conditions in the,3.031600770779487,264
+admission_source_id, Physician Referral,diag_2,Other disorders of urethra and,0.6502451889854035,451
+admission_source_id, Physician Referral,diag_2,Pneumonia,0.5591807380739444,154
+admission_source_id, Physician Referral,diag_2,Secondary and unspecified malignant neoplasm,2.2216038605076607,121
+admission_source_id, Physician Referral,diag_2,Symptoms involving urinary system,1.5233363248057437,135
+admission_source_id,Transfer from a hospital,diag_2,Diabetes mellitus,0.6356788520114045,115
+admission_source_id,Transfer from a hospital,diag_2,Heart failure,1.5903810783041097,249
+admission_source_id,Transfer from a hospital,diag_2,Other acute and subacute forms,3.1968485801715723,236
+admission_source_id,Transfer from a hospital,diag_2,Other forms of chronic ischemic,2.950585608309186,211
+admission_source_id, Physician Referral,diag_3,997,1.814136538885126,139
+admission_source_id, Physician Referral,diag_3,998,1.6248920797927928,119
+admission_source_id, Physician Referral,diag_3,Disorders of fluid,0.5994381454456011,636
+admission_source_id, Physician Referral,diag_3,Other disorders of urethra and,0.6256404422584877,247
+admission_source_id, Transfer from another health care facility,diag_3,?,3.3388951716166755,103
+admission_source_id,Transfer from a hospital,diag_3,Other forms of chronic ischemic,2.0229120077423546,195
+admission_source_id, Emergency Room,max_glu_serum,>200,0.47996057462723374,249
+admission_source_id, Emergency Room,max_glu_serum,Norm,0.3808970701413805,353
+admission_source_id, Physician Referral,max_glu_serum,Norm,0.20839170520739464,111
+admission_source_id,NULL,max_glu_serum,>200,10.021746270159966,672
+admission_source_id,NULL,max_glu_serum,>300,8.467980277133643,443
+admission_source_id,NULL,max_glu_serum,None,0.5473638523833169,2578
+admission_source_id,NULL,max_glu_serum,Norm,10.48553220900557,1256
+admission_source_id,NULL,A1Cresult,>8,0.6303973755657966,275
+admission_source_id, Transfer from a Skilled Nursing Facility (SNF),diabetesMed,No,1.5564881892535891,204
+admission_source_id, Transfer from another health care facility,readmitted,>30,0.5463718198123344,306
+admission_source_id,Transfer from a hospital,readmitted,>30,0.6336857691547111,509
+payer_code,?,medical_specialty,Emergency/Trauma,0.15995282200584465,310
+payer_code,?,medical_specialty,Orthopedics-Reconstructive,1.7184898230886179,778
+payer_code,?,medical_specialty,Pediatrics,1.821911607796164,155
+payer_code,?,medical_specialty,Pediatrics-Endocrinology,2.303836613729343,147
+payer_code,?,medical_specialty,PhysicalMedicineandRehabilitation,1.8169433087659248,153
+payer_code,BC,medical_specialty,Emergency/Trauma,1.6941553966749936,363
+payer_code,CM,medical_specialty,?,1.5456688223455057,994
+payer_code,CP,medical_specialty,Emergency/Trauma,1.5727122331121886,195
+payer_code,CP,medical_specialty,InternalMedicine,0.4419346451813487,134
+payer_code,HM,medical_specialty,Cardiology,0.47101082349935186,113
+payer_code,HM,medical_specialty,Family/GeneralPractice,0.5489466006522549,158
+payer_code,HM,medical_specialty,InternalMedicine,0.6074342285121183,373
+payer_code,MC,medical_specialty,Orthopedics-Reconstructive,0.5172775888109423,154
+payer_code,MC,medical_specialty,Psychiatry,0.5819947286606975,102
+payer_code,MC,medical_specialty,Pulmonology,0.6438064379743595,120
+payer_code,MC,medical_specialty,Radiologist,1.8507627372121513,439
+payer_code,MD,medical_specialty,Emergency/Trauma,2.034080067444102,279
+payer_code,OG,medical_specialty,Emergency/Trauma,4.819846356497854,198
+payer_code,PO,medical_specialty,?,1.5277745811196257,341
+payer_code,SP,medical_specialty,Emergency/Trauma,4.55112435431305,951
+payer_code,SP,medical_specialty,InternalMedicine,0.34246392611065757,175
+payer_code,UN,medical_specialty,?,0.48243693418461325,437
+payer_code,UN,medical_specialty,Cardiology,1.5078371329474458,169
+payer_code,UN,medical_specialty,Emergency/Trauma,2.5743883448046923,302
+payer_code,UN,medical_specialty,Surgery-General,2.1078763623345687,123
+payer_code,?,diag_1,250.03,1.9842292222293185,149
+payer_code,?,diag_1,Obesity and other hyperalimentation,0.6564003759787513,102
+payer_code,BC,diag_1,Heart failure,0.5864122477187803,112
+payer_code,HM,diag_1,Obesity and other hyperalimentation,5.612659701252052,113
+payer_code,HM,diag_1,Osteoarthrosis and allied disorders,1.5656843336492061,168
+payer_code,MC,diag_1,820,1.5858746995446684,373
+payer_code,MC,diag_1,Affective psychoses,0.606884730179767,110
+payer_code,MC,diag_1,Intervertebral disc disorders,0.6582107941371192,124
+payer_code,MC,diag_1,Other disorders of urethra and,1.5235139623815084,434
+payer_code,MC,diag_1,Pneumonitis due to solids and,1.6480954457777763,175
+payer_code,MC,diag_1,Symptoms involving respiratory system and,0.6545789009606411,568
+payer_code,SP,diag_1,Other cellulitis and abscess,1.6570940775473622,114
+payer_code,?,diag_2,250.01,1.6634273241225184,813
+payer_code,?,diag_2,250.03,1.6002697436682862,116
+payer_code,BC,diag_2,Cardiac dysrhythmias,0.6535976738717627,111
+payer_code,BC,diag_2,Heart failure,0.6441452050448591,134
+payer_code,HM,diag_2,Other and unspecified anemias,1.6600510477829744,104
+payer_code,MC,diag_2,250.01,0.34847119336658344,112
+payer_code,MC,diag_2,Chronic renal failure,1.5812046781358498,422
+payer_code,MC,diag_2,Diabetes with peripheral circulatory disorders,0.6624790182239566,111
+payer_code,MC,diag_2,Other acute and subacute forms,0.6495993310296817,379
+payer_code,SP,diag_2,250.02,1.5086374363185393,110
+payer_code,SP,diag_2,Heart failure,0.6309290386922268,128
+payer_code,?,diag_3,250.01,1.6264451438426144,461
+payer_code,HM,diag_3,Disorders of lipoid metabolism,1.7095695048939343,157
+payer_code,MC,diag_3,?,0.37464717090912,131
+payer_code,MC,diag_3,Chronic renal failure,1.5947947043099309,432
+payer_code,MC,diag_3,Obesity and other hyperalimentation,0.6643260886062793,106
+payer_code,?,max_glu_serum,>200,1.7593798701338634,740
+payer_code,?,max_glu_serum,>300,1.6334079695223918,536
+payer_code,?,max_glu_serum,Norm,1.6423653271762042,1234
+payer_code,MC,max_glu_serum,>200,0.5531652684174431,153
+payer_code,MC,max_glu_serum,>300,0.5421897670599543,117
+payer_code,CM,A1Cresult,Norm,1.880863973183548,133
+payer_code,MC,A1Cresult,>8,0.6013098343975146,1082
+payer_code,MD,A1Cresult,Norm,1.7431210901607153,203
+payer_code,UN,A1Cresult,>7,1.6720305571105865,127
+payer_code,UN,A1Cresult,>8,1.6120690412061713,267
+medical_specialty,?,diag_1,Intervertebral disc disorders,0.5657368416889257,180
+medical_specialty,?,diag_1,Osteoarthrosis and allied disorders,0.6457939419279246,594
+medical_specialty,Cardiology,diag_1,Acute myocardial infarction,3.1888653346399645,552
+medical_specialty,Cardiology,diag_1,Cardiac dysrhythmias,3.152048310032612,386
+medical_specialty,Cardiology,diag_1,Heart failure,1.6301306108602083,387
+medical_specialty,Cardiology,diag_1,Other forms of chronic ischemic,4.8086643876821595,1501
+medical_specialty,Cardiology,diag_1,Symptoms involving respiratory system and,2.079037277617391,377
+medical_specialty,Emergency/Trauma,diag_1,General symptoms,1.9725947296708388,175
+medical_specialty,Emergency/Trauma,diag_1,Other forms of chronic ischemic,0.4621895375394628,151
+medical_specialty,Emergency/Trauma,diag_1,Pneumonia,1.5630002750195475,238
+medical_specialty,Family/GeneralPractice,diag_1,Acute myocardial infarction,0.5585674969412425,116
+medical_specialty,Family/GeneralPractice,diag_1,Other cellulitis and abscess,1.6160197568671861,170
+medical_specialty,Family/GeneralPractice,diag_1,Other forms of chronic ischemic,0.4352631984160997,163
+medical_specialty,InternalMedicine,diag_1,250.02,1.9874597050173064,159
+medical_specialty,InternalMedicine,diag_1,Acute myocardial infarction,0.6251940783928065,277
+medical_specialty,InternalMedicine,diag_1,Disorders of fluid,1.5069046640331598,277
+medical_specialty,InternalMedicine,diag_1,Other forms of chronic ischemic,0.5644926636698527,451
+medical_specialty,InternalMedicine,diag_1,Transient cerebral ischemia,1.9545359693503868,225
+medical_specialty,ObstetricsandGynecology,diag_1,Other current conditions in the,76.48983957219252,154
+medical_specialty,Orthopedics,diag_1,Intervertebral disc disorders,10.702282080059858,112
+medical_specialty,Orthopedics,diag_1,Osteoarthrosis and allied disorders,18.807722242558025,569
+medical_specialty,Orthopedics-Reconstructive,diag_1,820,8.654404304238149,104
+medical_specialty,Orthopedics-Reconstructive,diag_1,Osteoarthrosis and allied disorders,16.387681880400635,456
+medical_specialty,PhysicalMedicineandRehabilitation,diag_1,V57,100.13392675562787,179
+medical_specialty,Psychiatry,diag_1,Affective psychoses,57.78083562030316,315
+medical_specialty,Psychiatry,diag_1,Schizophrenic disorders,59.298312111341424,140
+medical_specialty,Radiologist,diag_1,Other forms of chronic ischemic,5.493005946939985,334
+medical_specialty,Surgery-Cardiovascular/Thoracic,diag_1,Other forms of chronic ischemic,5.994662413617958,218
+medical_specialty,Surgery-General,diag_1,Cholelithiasis,6.107766626483276,147
+medical_specialty,Surgery-General,diag_1,Osteoarthrosis and allied disorders,2.1770988194450345,129
+medical_specialty,Surgery-Neuro,diag_1,Intervertebral disc disorders,37.62153071052827,142
+medical_specialty,Cardiology,diag_2,Angina pectoris,4.082903867013354,198
+medical_specialty,Cardiology,diag_2,Cardiac dysrhythmias,1.5253510974822508,322
+medical_specialty,Cardiology,diag_2,Cardiomyopathy,2.5791770348732372,136
+medical_specialty,Cardiology,diag_2,Other acute and subacute forms,4.092740074663085,499
+medical_specialty,Cardiology,diag_2,Other diseases of endocardium,2.841124702477551,141
+medical_specialty,Cardiology,diag_2,Other forms of chronic ischemic,3.293661178119687,389
+medical_specialty,Emergency/Trauma,diag_2,General symptoms,1.5451426835698647,101
+medical_specialty,InternalMedicine,diag_2,Iron deficiency anemias,1.746631254388375,116
+medical_specialty,Nephrology,diag_2,Hypertensive renal disease,14.49342118987802,272
+medical_specialty,ObstetricsandGynecology,diag_2,Other current conditions in the,57.33842088071978,135
+medical_specialty,Orthopedics,diag_2,Diabetes mellitus,2.1404258930045845,170
+medical_specialty,Orthopedics,diag_2,Essential hypertension,2.450790909340132,120
+medical_specialty,Orthopedics-Reconstructive,diag_2,Diabetes mellitus,2.450377814660361,179
+medical_specialty,Surgery-General,diag_2,Diabetes mellitus,1.5428617502453261,240
+medical_specialty,Surgery-General,diag_2,Essential hypertension,1.6058694328512806,154
+medical_specialty,?,diag_3,?,0.5909833293180369,349
+medical_specialty,Cardiology,diag_3,Disorders of lipoid metabolism,2.0429672349103076,199
+medical_specialty,Cardiology,diag_3,Other diseases of endocardium,2.608301995116473,124
+medical_specialty,Cardiology,diag_3,Other forms of chronic ischemic,2.525061668086838,402
+medical_specialty,Cardiology,diag_3,V45,2.5748398537607824,137
+medical_specialty,Nephrology,diag_3,Hypertensive renal disease,8.75013069060251,132
+medical_specialty,Orthopedics,diag_3,Diabetes mellitus,1.8838472439534502,270
+medical_specialty,Orthopedics,diag_3,Essential hypertension,1.952894954109283,204
+medical_specialty,Orthopedics-Reconstructive,diag_3,Diabetes mellitus,1.722013386754765,227
+medical_specialty,Orthopedics-Reconstructive,diag_3,Essential hypertension,1.654910785233153,159
+medical_specialty,Pediatrics-Endocrinology,diag_3,?,43.68724142718312,110
+medical_specialty,Psychiatry,diag_3,Diabetes mellitus,1.5463501807044608,120
+medical_specialty,Surgery-Neuro,diag_3,Diabetes mellitus,2.0312387153630116,105
+medical_specialty,Family/GeneralPractice,max_glu_serum,>200,2.3217592172509978,161
+medical_specialty,Family/GeneralPractice,max_glu_serum,>300,2.3474535357106676,127
+medical_specialty,Family/GeneralPractice,max_glu_serum,Norm,2.1069708095192623,261
+medical_specialty,Surgery-General,max_glu_serum,Norm,2.436918641474648,131
+medical_specialty,Emergency/Trauma,A1Cresult,>7,1.60673333428879,290
+medical_specialty,Pediatrics-Endocrinology,A1Cresult,>8,7.871943955247074,102
+medical_specialty,ObstetricsandGynecology,change,Ch,0.641828397609356,171
+medical_specialty,Pediatrics-Endocrinology,change,No,1.5028884091237145,122
+medical_specialty,ObstetricsandGynecology,diabetesMed,No,1.5165437115016946,217
+diag_1,250.02,diag_2,Disorders of fluid,4.268853502762285,144
+diag_1,250.11,diag_2,Disorders of fluid,6.300456276998413,174
+diag_1,250.13,diag_2,Disorders of fluid,6.057614832158706,202
+diag_1,250.8,diag_2,Chronic ulcer of skin,10.19230792806267,186
+diag_1,38,diag_2,Other disorders of urethra and,7.278421794150105,256
+diag_1,820,diag_2,Other and unspecified anemias,8.102821983231948,104
+diag_1,996,diag_2,38,22.593375145180023,102
+diag_1,996,diag_2,Hypertensive renal disease,5.137491534717938,131
+diag_1,Acute myocardial infarction,diag_2,Cardiac dysrhythmias,1.9080421001466579,274
+diag_1,Acute myocardial infarction,diag_2,Diabetes mellitus,0.5854824513670017,119
+diag_1,Acute myocardial infarction,diag_2,Heart failure,3.46215210128321,609
+diag_1,Acute myocardial infarction,diag_2,Other forms of chronic ischemic,8.127667787454142,653
+diag_1,Acute renal failure,diag_2,Disorders of fluid,5.871582162966331,364
+diag_1,Acute renal failure,diag_2,Hypertensive renal disease,5.31452002949348,116
+diag_1,Asthma,diag_2,Diabetes mellitus,2.235535268422305,106
+diag_1,Cardiac dysrhythmias,diag_2,Cardiac dysrhythmias,2.067117404601733,210
+diag_1,Cardiac dysrhythmias,diag_2,Chronic airway obstruction,1.708100606093274,109
+diag_1,Cardiac dysrhythmias,diag_2,Heart failure,2.6036483026779953,324
+diag_1,Chronic bronchitis,diag_2,Heart failure,2.9928558212243357,242
+diag_1,Diabetes with ophthalmic manifestations,diag_2,Hypertensive renal disease,23.87920782004236,105
+diag_1,Diabetes with other specified manifestations,diag_2,Atherosclerosis,86.91026543012471,171
+diag_1,Diabetes with other specified manifestations,diag_2,Chronic ulcer of skin,14.989914347029051,134
+diag_1,Diabetes with other specified manifestations,diag_2,Symptoms involving cardiovascular system,44.347664324100876,108
+diag_1,Diabetes with peripheral circulatory disorders,diag_2,Chronic ulcer of skin,13.30417535659264,142
+diag_1,Diseases of pancreas,diag_2,Cholelithiasis,40.133557800224466,115
+diag_1,Heart failure,diag_2,Acute renal failure,1.7009409747895994,101
+diag_1,Heart failure,diag_2,Cardiac dysrhythmias,2.8332567045456165,558
+diag_1,Heart failure,diag_2,Cardiomyopathy,7.216196934900747,355
+diag_1,Heart failure,diag_2,Chronic airway obstruction,2.0450943426082278,253
+diag_1,Heart failure,diag_2,Chronic bronchitis,3.2081090006439648,163
+diag_1,Heart failure,diag_2,Chronic renal failure,2.0371665815709563,106
+diag_1,Heart failure,diag_2,Diabetes mellitus,0.40179014457393775,112
+diag_1,Heart failure,diag_2,Essential hypertension,0.5877279857838416,101
+diag_1,Heart failure,diag_2,Heart failure,0.4435340485588264,107
+diag_1,Heart failure,diag_2,Hypertensive renal disease,2.128386534771327,192
+diag_1,Heart failure,diag_2,Other diseases of endocardium,2.980492607267105,138
+diag_1,Heart failure,diag_2,Other forms of chronic ischemic,1.6608032587178316,183
+diag_1,Heart failure,diag_2,Pneumonia,2.6100727099183065,130
+diag_1,Intervertebral disc disorders,diag_2,Diabetes mellitus,3.1800776783607683,147
+diag_1,Obesity and other hyperalimentation,diag_2,Diabetes mellitus,4.1477697686064525,104
+diag_1,Occlusion of cerebral arteries,diag_2,Cardiac dysrhythmias,1.9940108940603836,156
+diag_1,Occlusion of cerebral arteries,diag_2,Essential hypertension,2.0069047759501593,137
+diag_1,Occlusion of cerebral arteries,diag_2,Hemiplegia,34.10837248475378,141
+diag_1,Osteoarthrosis and allied disorders,diag_2,Diabetes mellitus,2.6714938268349675,357
+diag_1,Osteoarthrosis and allied disorders,diag_2,Essential hypertension,3.3865999853358106,279
+diag_1,Osteoarthrosis and allied disorders,diag_2,Other and unspecified anemias,10.1278741310329,301
+diag_1,Other cellulitis and abscess,diag_2,250.02,3.5286535153214045,113
+diag_1,Other cellulitis and abscess,diag_2,Chronic ulcer of skin,4.162064094740886,103
+diag_1,Other cellulitis and abscess,diag_2,Diabetes mellitus,1.7871656867977777,184
+diag_1,Other diseases of lung,diag_2,Chronic bronchitis,17.81367199356022,151
+diag_1,Other disorders of urethra and,diag_2,Disorders of fluid,3.969078469710924,255
+diag_1,Other forms of chronic ischemic,diag_2,Angina pectoris,9.363307273431992,557
+diag_1,Other forms of chronic ischemic,diag_2,Other acute and subacute forms,12.115516350961066,1812
+diag_1,Pneumonia,diag_2,Asthma,4.941499780657584,106
+diag_1,Pneumonia,diag_2,Chronic airway obstruction,1.8466820745580375,140
+diag_1,Pneumonia,diag_2,Chronic bronchitis,9.281766224014925,289
+diag_1,Pneumonia,diag_2,Disorders of fluid,1.534918385673865,241
+diag_1,Pneumonia,diag_2,Heart failure,2.191590801721166,324
+diag_1,Pneumonia,diag_2,Other disorders of urethra and,1.5480914436473556,119
+diag_1,Symptoms involving respiratory system and,diag_2,Diabetes mellitus,2.2121351304494015,471
+diag_1,Symptoms involving respiratory system and,diag_2,Essential hypertension,2.4378920098172894,320
+diag_1,Symptoms involving respiratory system and,diag_2,Other forms of chronic ischemic,3.647665138224349,307
+diag_1,250.13,diag_3,?,13.186677172799623,117
+diag_1,38,diag_3,Disorders of fluid,2.713543355869904,146
+diag_1,996,diag_3,Hypertensive renal disease,5.074015178647565,104
+diag_1,Acute myocardial infarction,diag_3,Disorders of lipoid metabolism,1.5695136871629802,104
+diag_1,Acute myocardial infarction,diag_3,Heart failure,1.5494712293424566,179
+diag_1,Acute myocardial infarction,diag_3,Other forms of chronic ischemic,4.792219884788956,519
+diag_1,Acute renal failure,diag_3,Disorders of fluid,5.0185440172700835,233
+diag_1,Affective psychoses,diag_3,Diabetes mellitus,1.6821124209789078,135
+diag_1,Cardiac dysrhythmias,diag_3,Cardiac dysrhythmias,1.8016324331696918,140
+diag_1,Cardiac dysrhythmias,diag_3,Heart failure,1.761981874426743,144
+diag_1,Cardiac dysrhythmias,diag_3,Other forms of chronic ischemic,2.1666358546111413,166
+diag_1,Diabetes with other specified manifestations,diag_3,Chronic ulcer of skin,19.482808039891506,115
+diag_1,Diverticula of intestine,diag_3,Essential hypertension,1.587908629849097,104
+diag_1,Heart failure,diag_3,Cardiac dysrhythmias,2.3233362972973475,350
+diag_1,Heart failure,diag_3,Cardiomyopathy,3.5292492893235194,142
+diag_1,Heart failure,diag_3,Chronic airway obstruction,1.8915101824914045,174
+diag_1,Heart failure,diag_3,Chronic renal failure,2.594099581151278,137
+diag_1,Heart failure,diag_3,Essential hypertension,0.6573485978770598,241
+diag_1,Heart failure,diag_3,Hypertensive renal disease,2.206519936597801,160
+diag_1,Heart failure,diag_3,Other diseases of endocardium,3.9004980990271303,173
+diag_1,Heart failure,diag_3,Other forms of chronic ischemic,2.127506020172048,316
+diag_1,Intervertebral disc disorders,diag_3,Diabetes mellitus,1.7502653484731148,146
+diag_1,Occlusion and stenosis of precerebral,diag_3,Diabetes mellitus,1.5027963241537752,117
+diag_1,Occlusion and stenosis of precerebral,diag_3,Essential hypertension,2.449603864562881,139
+diag_1,Osteoarthrosis and allied disorders,diag_3,Diabetes mellitus,2.0278016088215916,489
+diag_1,Osteoarthrosis and allied disorders,diag_3,Disorders of lipoid metabolism,2.3642207818050403,103
+diag_1,Osteoarthrosis and allied disorders,diag_3,Essential hypertension,2.2303317511414567,392
+diag_1,Other forms of chronic ischemic,diag_3,250.01,2.1347725838118268,102
+diag_1,Other forms of chronic ischemic,diag_3,Disorders of lipoid metabolism,2.560942738326619,306
+diag_1,Other forms of chronic ischemic,diag_3,Essential hypertension,1.5288980387065367,737
+diag_1,Other forms of chronic ischemic,diag_3,Other acute and subacute forms,8.552728034865588,194
+diag_1,Other forms of chronic ischemic,diag_3,Other diseases of endocardium,1.8519534246161495,108
+diag_1,Other forms of chronic ischemic,diag_3,V45,2.8804319603345103,188
+diag_1,Pneumonia,diag_3,Cardiac dysrhythmias,1.5923283946544673,147
+diag_1,Pneumonia,diag_3,Disorders of fluid,1.7178596263920878,202
+diag_1,Pneumonia,diag_3,Heart failure,2.1628947585577016,210
+diag_1,Symptoms involving respiratory system and,diag_3,Diabetes mellitus,1.6084585218439393,618
+diag_1,Symptoms involving respiratory system and,diag_3,Disorders of lipoid metabolism,2.5355271215393045,176
+diag_1,Symptoms involving respiratory system and,diag_3,Essential hypertension,1.853341901543476,519
+diag_1,Symptoms involving respiratory system and,diag_3,Other forms of chronic ischemic,2.115458184614778,240
+diag_1,Transient cerebral ischemia,diag_3,Diabetes mellitus,1.5215689278085562,145
+diag_1,Transient cerebral ischemia,diag_3,Essential hypertension,1.8572917723567808,129
+diag_1,250.02,A1Cresult,>8,4.546604361219824,210
+diag_1,250.02,A1Cresult,None,0.6459077255580948,277
+diag_1,250.11,A1Cresult,>8,2.9353834617159493,111
+diag_1,250.12,A1Cresult,>8,4.3072012389228265,112
+diag_1,250.13,A1Cresult,>8,4.774477931521079,218
+diag_1,250.13,A1Cresult,None,0.6510304761517773,276
+diag_1,250.8,A1Cresult,Norm,1.7577360830321571,101
+diag_1,250.82,A1Cresult,None,0.647678488574337,141
+diag_1,Diabetes with peripheral circulatory disorders,A1Cresult,>8,2.362021409470128,132
+diag_1,Occlusion of cerebral arteries,A1Cresult,>8,1.6001922014916987,223
+diag_1,Other cellulitis and abscess,A1Cresult,>8,1.6824350806312374,218
+diag_1,Other cellulitis and abscess,A1Cresult,Norm,1.6426846971972644,128
+diag_1,250.02,change,Ch,1.7133044777485589,402
+diag_1,250.02,change,No,0.4216118246969199,122
+diag_1,250.12,change,Ch,1.6503431748222732,218
+diag_1,Diabetes mellitus,change,Ch,1.6861132275793156,151
+diag_1,Diabetes with ketoacidosis,change,Ch,1.6774732299191895,166
+diag_1,Diverticula of intestine,change,Ch,0.6093571523186021,194
+diag_1,Gastrointestinal hemorrhage,change,Ch,0.6297588716045904,119
+diag_1,Intestinal obstruction without mention of,change,Ch,0.5750552605827816,146
+diag_1,Other symptoms involving abdomen and,change,Ch,0.6363268644407105,104
+diag_1,8,diabetesMed,No,1.5147965413271534,102
+diag_1,Diverticula of intestine,diabetesMed,No,1.5790879805346352,270
+diag_1,Gastrointestinal hemorrhage,diabetesMed,No,1.5765933707707571,160
+diag_1,Intestinal obstruction without mention of,diabetesMed,No,1.6867741685076025,230
+diag_1,Obesity and other hyperalimentation,diabetesMed,No,1.533215033614076,132
+diag_1,Other symptoms involving abdomen and,diabetesMed,No,1.58355845792245,139
+diag_1,820,readmitted,<30,1.7240125798583414,125
+diag_1,Occlusion of cerebral arteries,readmitted,<30,1.7970732015221678,250
+diag_1,Symptoms involving respiratory system and,readmitted,<30,0.5794497018408089,155
+diag_2,250.01,diag_3,Essential hypertension,1.5425646069445387,160
+diag_2,250.02,diag_3,Disorders of fluid,1.6907693693801027,127
+diag_2,250.02,diag_3,Essential hypertension,1.6165245402813537,232
+diag_2,38,diag_3,995,128.37144968852286,102
+diag_2,?,diag_3,?,48.45312231014855,244
+diag_2,Acute renal failure,diag_3,Disorders of fluid,4.062842346975387,209
+diag_2,Cardiac dysrhythmias,diag_3,Cardiac dysrhythmias,1.7170161438227036,230
+diag_2,Cardiac dysrhythmias,diag_3,Chronic airway obstruction,2.1149886828421423,173
+diag_2,Cardiac dysrhythmias,diag_3,Heart failure,2.3494993267353697,331
+diag_2,Cardiac dysrhythmias,diag_3,Other diseases of endocardium,2.789132601309729,110
+diag_2,Cardiac dysrhythmias,diag_3,Other forms of chronic ischemic,1.7717485332574743,234
+diag_2,Cardiomyopathy,diag_3,Cardiac dysrhythmias,3.496718746604663,117
+diag_2,Chronic airway obstruction,diag_3,Cardiac dysrhythmias,1.6638557738629676,140
+diag_2,Chronic airway obstruction,diag_3,Heart failure,2.0001459973729956,177
+diag_2,Chronic airway obstruction,diag_3,Other forms of chronic ischemic,1.8924611680029637,157
+diag_2,Chronic bronchitis,diag_3,Heart failure,3.43927679296552,125
+diag_2,Chronic renal failure,diag_3,Hypertensive renal disease,11.153545294487014,190
+diag_2,Chronic ulcer of skin,diag_3,Other cellulitis and abscess,21.827178752118172,201
+diag_2,Diabetes mellitus,diag_3,?,5.128388492550145,440
+diag_2,Diabetes mellitus,diag_3,Acquired hypothyroidism,4.252255866800534,123
+diag_2,Diabetes mellitus,diag_3,Disorders of lipoid metabolism,4.1880673575072525,479
+diag_2,Diabetes mellitus,diag_3,Essential hypertension,4.234823341058347,1954
+diag_2,Diabetes mellitus,diag_3,Nondependent abuse of drugs,2.322430657348597,115
+diag_2,Diabetes mellitus,diag_3,Obesity and other hyperalimentation,3.678027850405942,144
+diag_2,Diabetes with peripheral circulatory disorders,diag_3,Inflammatory and toxic neuropathy,98.72954238383363,235
+diag_2,Disorders of fluid,diag_3,Acute renal failure,2.4293592364926218,104
+diag_2,Disorders of fluid,diag_3,Disorders of fluid,2.216551833269164,492
+diag_2,Disorders of fluid,diag_3,Essential hypertension,0.6083397030221602,258
+diag_2,Disorders of fluid,diag_3,Other disorders of urethra and,2.3004192362464977,190
+diag_2,Disorders of lipoid metabolism,diag_3,Diabetes mellitus,3.445983038796226,152
+diag_2,Essential hypertension,diag_3,Diabetes mellitus,4.588949397171841,1791
+diag_2,Essential hypertension,diag_3,Disorders of lipoid metabolism,5.814812846441115,410
+diag_2,Heart failure,diag_3,Cardiac dysrhythmias,2.7669025027599425,454
+diag_2,Heart failure,diag_3,Cardiomyopathy,5.476450966034449,240
+diag_2,Heart failure,diag_3,Chronic airway obstruction,2.6448392388520117,265
+diag_2,Heart failure,diag_3,Diabetes mellitus,0.553029758397961,303
+diag_2,Heart failure,diag_3,Essential hypertension,0.4732977858452928,189
+diag_2,Heart failure,diag_3,Hypertensive renal disease,1.544691205903155,122
+diag_2,Heart failure,diag_3,Other diseases of endocardium,2.442586458156958,118
+diag_2,Heart failure,diag_3,Other forms of chronic ischemic,1.7431180243238724,282
+diag_2,Hypertensive heart disease,diag_3,Heart failure,10.127623418868207,102
+diag_2,Hypertensive renal disease,diag_3,Chronic renal failure,12.598981102221957,271
+diag_2,Hypertensive renal disease,diag_3,Disorders of fluid,1.6378535205703564,128
+diag_2,Hypertensive renal disease,diag_3,Heart failure,1.8286344035205297,118
+diag_2,Hypertensive renal disease,diag_3,V45,5.19345999673567,105
+diag_2,Nondependent abuse of drugs,diag_3,Diabetes mellitus,1.723440448923751,110
+diag_2,Other acute and subacute forms,diag_3,Cardiac dysrhythmias,1.5510559345669737,120
+diag_2,Other acute and subacute forms,diag_3,Heart failure,1.843479282961362,150
+diag_2,Other acute and subacute forms,diag_3,Other forms of chronic ischemic,1.59935814479356,122
+diag_2,Other cellulitis and abscess,diag_3,Chronic ulcer of skin,14.687305865742522,152
+diag_2,Other disorders of urethra and,diag_3,41,6.638198331990728,109
+diag_2,Other disorders of urethra and,diag_3,Diabetes mellitus,0.6423802092735679,183
+diag_2,Other disorders of urethra and,diag_3,Disorders of fluid,2.503012947335698,272
+diag_2,Other disorders of urethra and,diag_3,Essential hypertension,0.5105211325046373,106
+diag_2,Other forms of chronic ischemic,diag_3,Diabetes mellitus,2.0379802002769143,510
+diag_2,Other forms of chronic ischemic,diag_3,Essential hypertension,2.1492287783726765,392
+diag_2,Other forms of chronic ischemic,diag_3,V45,11.054725506182907,273
+diag_2,Symptoms involving respiratory system and,diag_3,Diabetes mellitus,1.7436357442995347,106
+diag_2,Disorders of fluid,max_glu_serum,>300,2.0752939702765945,101
+diag_2,250.02,A1Cresult,>8,3.2185034014713647,442
+diag_2,?,A1Cresult,>8,4.321851583272903,112
+diag_2,Chronic ulcer of skin,A1Cresult,>8,1.6112717021940401,171
+diag_2,Diabetes with peripheral circulatory disorders,A1Cresult,>8,2.6671051721305097,138
+diag_2,Disorders of fluid,A1Cresult,>8,1.6509679565771542,670
+diag_2,Other cellulitis and abscess,A1Cresult,>8,1.8400364353596101,151
+diag_2,250.02,change,No,0.6334513820626821,545
+diag_2,250.92,change,Ch,1.5693196318976985,104
+diag_2,250.02,diabetesMed,No,0.5071054896838869,190
+diag_2,Intestinal obstruction without mention of,diabetesMed,No,1.666255130287552,113
+diag_2,Other current conditions in the,diabetesMed,No,1.5134321434169995,103
+diag_3,250.02,A1Cresult,>8,2.6599181977204416,215
+diag_3,?,A1Cresult,>8,2.824638713353362,305
+diag_3,Cardiac dysrhythmias,A1Cresult,>8,0.6454039536527785,154
+diag_3,Chronic ulcer of skin,A1Cresult,>8,1.5411885834690164,108
+diag_3,250.02,change,Ch,1.5123839099955296,621
+diag_3,250.02,change,No,0.5845297429053316,296
+diag_3,250.02,diabetesMed,No,0.53508753742435,118
+diag_3,Diabetes with peripheral circulatory disorders,diabetesMed,No,0.6585487580962693,105
+max_glu_serum,Norm,change,Ch,0.6657212463269532,516
+max_glu_serum,>300,diabetesMed,No,0.6490413648387948,118
+max_glu_serum,Norm,diabetesMed,No,1.5878758955428098,661
+A1Cresult,>8,change,No,0.6348341899392801,2210
+A1Cresult,>8,diabetesMed,No,0.40500868011745456,614
+change,No,diabetesMed,No,1.8108573454195573,17199

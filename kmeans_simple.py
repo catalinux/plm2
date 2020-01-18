@@ -14,11 +14,11 @@ model = KMeans(n_clusters=5)
 labels = model.fit_predict(num_df)
 
 X = num_df
-
+y= df["gender"]
 from util import plot2d
 from sklearn.manifold import TSNE
 
-#plot2d(X, labels, labels, mode=TSNE)
+plot2d(X, labels, labels, mode=TSNE)
 
 # count_class_0, count_class_1 = df["readmitted"].value_counts()
 #

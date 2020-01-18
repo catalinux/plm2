@@ -49,7 +49,7 @@ distances, indices = nbrs.kneighbors(X)
 distances = np.sort(distances, axis=0)
 distances = distances[:,1]
 plt.plot(distances)
-
+plt.show()
 
 m = DBSCAN(eps=5, min_samples=5)
 m.fit(X)
