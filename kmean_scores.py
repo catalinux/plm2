@@ -33,7 +33,7 @@ X_scaled = scaler.fit_transform(numdf)
 y = df["gender"]
 from sklearn.metrics import silhouette_score, davies_bouldin_score, v_measure_score
 
-r = range(2, 12)
+r = range(2, 40)
 for i in r:
     km = KMeans(n_clusters=i, random_state=0, n_jobs=64).fit(X_scaled)
     preds = km.predict(X_scaled)

@@ -97,6 +97,9 @@ DBSCAN is data clustering algorithm that groups points which are closely packed 
 **Choosing paramaters**
 
 
+Epsilon : choos 3
+
+![epsilon](./img/epsilon.png)
 
 
 ###Hyperparameter tuning

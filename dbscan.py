@@ -5,7 +5,7 @@ import pandas as pd
 from util import get_data
 from util import plot2d
 import pandas as pd
-df = get_data().sample(1000)
+df = get_data()
 from sklearn.decomposition import PCA
 import numpy as np
 from sklearn.datasets.samples_generator import make_blobs

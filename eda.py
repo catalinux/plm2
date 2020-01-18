@@ -78,7 +78,7 @@ def histnum():
         plt.title(x)
         plt.show()
 
-    # histnum()
+histnum()
     # heatmap()
     # plot_categorical()
     # explaind_variance()
