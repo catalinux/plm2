@@ -35,7 +35,7 @@ from sklearn.metrics import silhouette_score, davies_bouldin_score, v_measure_sc
 
 r = range(2, 12)
 for i in r:
-    km = KMeans(n_clusters=i, random_state=0).fit(X_scaled)
+    km = KMeans(n_clusters=i, random_state=0, n_jobs=64).fit(X_scaled)
     preds = km.predict(X_scaled)
 
     print("Score for number of cluster(s) {}: {}".format(i, km.score(X_scaled)))
