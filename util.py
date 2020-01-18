@@ -7,6 +7,25 @@ COLORS = ['tab:blue', 'tab:orange', 'tab:green', 'tab:red', 'tab:purple', 'tab:b
 MARKERS = ['o', 'v', 's', '<', '>', '8', '^', 'p', '*', 'h', 'H', 'D', 'd', 'P', 'X']
 
 
+def report_missing_values(df):
+    attr_list = []
+    missing_value_list = []
+    for attr in attributes:
+        missing_count = df[attr].isnull().sum()
+        if missing_count > 0:
+            attr_list.append(attr)
+            missing_value_list.append(round(missing_count / len(df[attr]) * 100))
+
+    fig, ax = plt.subplots()
+    y_pos = np.arange(len(attr_list))
+    plt.bar(y_pos, missing_value_list)
+    plt.xticks(y_pos, attr_list)
+    plt.ylabel('Percentage')
+
+    plt.show()
+
+
+
 def plot2d(X, y_pred, y_true, mode=None, centroids=None):
     transformer = None
     X_r = X

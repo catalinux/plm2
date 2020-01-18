@@ -5,7 +5,7 @@ import pandas as pd
 from util import get_data
 from util import plot2d
 import pandas as pd
-df = get_data()
+df = get_data().sample(1000)
 from sklearn.decomposition import PCA
 import numpy as np
 from sklearn.datasets.samples_generator import make_blobs
@@ -57,24 +57,24 @@ distances = np.sort(distances, axis=0)
 distances = distances[:, 1]
 
 plt.plot(distances)
-
-fig = plt.figure()
-for x in [2,3]:
-    # Init NearestNeighbors with n_neighbors = 4 and fit on the training data
-    neigh = NearestNeighbors(n_neighbors=x)
-    nbrs = neigh.fit(X)
-    # Find the nearest neighbors of the data points and determine the distances
-    distances, indices = nbrs.kneighbors(X)
-    distances = np.sort(distances, axis=0)
-    distances = distances[:, 1]
-    plt.plot(distances)
-    fig.savefig('')
-
-fig.save('img/epsilon.png')
-# plt.legend([2,3,4,5])
 plt.show()
+# fig = plt.figure()
+# l = [2, 3,40,60]
+# for x in l:
+#     # Init NearestNeighbors with n_neighbors = 4 and fit on the training data
+#     neigh = NearestNeighbors(n_neighbors=x)
+#     nbrs = neigh.fit(X)
+#     # Find the nearest neighbors of the data points and determine the distances
+#     distances, indices = nbrs.kneighbors(X)
+#     distances = np.sort(distances, axis=0)
+#     distances = distances[:, 1]
+#     plt.plot(distances)
+#
+# fig.savefig('img/epsilon.png')
+# plt.legend(l)
+# plt.show()
 
-m = DBSCAN(eps=5, min_samples=5)
+m = DBSCAN(eps=3, min_samples=5)
 m.fit(X)
 colors = ['royalblue', 'maroon', 'forestgreen', 'mediumorchid', 'tan', 'deeppink', 'olive', 'goldenrod', 'lightcyan',
           'navy']
