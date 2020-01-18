@@ -21,7 +21,8 @@ A couples of observations are made
 
 - `?` is used for `na` value
 - some categorical are imbalanced:  `readmitted`, `a1Cresult`, `diag_1`, `diag_2`, `diag_3`
-![diag](./img/bad_categ_diag_1.png){width=25%} ![diag](./img/bad_diag_2.png){width=25%} ![diag](./img/bad_diag3.png){width=25%} ![diag](./img/bad_glu_serum.png){width=25%}
+
+![diag](./img/bad_categ_diag_1.png){width=23%} ![diag](./img/bad_diag_2.png){width=23%} ![diag](./img/bad_diag3.png){width=23%} ![diag](./img/bad_glu_serum.png){width=23%}
 
 
 
@@ -79,6 +80,10 @@ For categorical features I reduced their unique values and after that LabeledEnc
 Undersamples was used in order to unsample majority class using method `NearMiss`
  
  
+Let's see how gender and readmition look:
+
+![gender](./img/3dgender.png){width=40%} ![readmitted](./img/3d_readmitted_pca.png){width=40%}  
+ 
  
 # Unsupervised Learning
 
@@ -101,7 +106,14 @@ Looking at these tree graphs it looks that the best value for K  would be 8
 ![km_scores](./img/km_scores_km_scores.png){width=33%}  ![km_silhouette](./img/km_scores_km_silhouette.png){width=33%} ![db_score](./img/km_scores_db_score.png){width=33%} 
 
 
-]
+![km_scores](./img/km_scores_50km_scores.png){width=48%}  ![km_silhouette](./img/km_scores_50km_scores.png){width=48%}  
+
+
+We plot data for 2-clusers and  8-cluster data
+
+![km_scores](./img/kmean_8_plot_2d.png){width=48%}  ![km_silhouette](./img/kmean_8_plot_3d.png){width=48%}  
+![km_scores](./kmean2_2d.png){width=48%}  ![km_silhouette](./img/kmean2_3d.png){width=48%}  
+
 
 
 
@@ -113,18 +125,22 @@ DBSCAN is data clustering algorithm that groups points which are closely packed 
 **Choosing paramaters**
 
 
-Epsilon : choos 3
+Epsilon should be choose somewhere between 0.5 and 1.5
 
-![epsilon](./img/epsilon.png){width=40%}
+![epsilon](./NearestNeighbors.png){width=40%} ![epsi](./epsi_vs_n_clusters.png){width=40%}
 
+In order to understand the senitivity of epsilon I ploted then number of clusters:
 
+![epsi_clusters](./epsi_vs_n_clusters.png){width=40%} 
 
+epsi=1.5, k=3
+![dbscanplot](dbscanplt.png){width=40%}
 
 
 # Conclusions
 
 
-
+The data set was not visible separable and I did not find any matching predictor that would be classified by unupervisded clusters these 
 
 
 # References

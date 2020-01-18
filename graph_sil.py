@@ -45,7 +45,7 @@ X_rs, y_rs = sampler.fit_sample(X, y)
 
 from sklearn.manifold import TSNE
 
-transformer = TSNE(n_components=2)
+transformer = TSNE(n_components=7)
 X_std = transformer.fit_transform(X_rs)
 
 for n_clusters in range_n_clusters:
@@ -128,5 +128,5 @@ for n_clusters in range_n_clusters:
     ax2.set_ylabel("Feature space for the 2nd feature")
 
     plt.suptitle(("n_clusters = %d" % n_clusters), fontsize=14, fontweight='bold')
-    fig.savefig(str(n_clusters)+'-all-sil-tsne.png')
+    fig.savefig(str(n_clusters)+'-pca-sil-tsne.png')
     plt.show()

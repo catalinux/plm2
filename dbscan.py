@@ -65,18 +65,18 @@ X_rs, y_rs = sampler.fit_sample(X, y)
 # plot2d(X, clustering.labels_, y, mode=PCA)
 # def distances_nn(n_neighbors):
 
-for i in range(2, 12):
-    print("Plot " + str(i))
-    neigh = NearestNeighbors(n_neighbors=i)
-    nbrs = neigh.fit(X_rs)
-    # Find the nearest neighbors of the data points and determine the distances
-    distances, indices = nbrs.kneighbors(X_rs)
-    distances = np.sort(distances, axis=0)
-    distances = distances[:, 1]
-    plt.plot(distances)
-    plt.savefig('NearestNeighbors.png')
-
-plt.show()
+# for i in range(2, 2):
+#     print("Plot " + str(i))
+#     neigh = NearestNeighbors(n_neighbors=i)
+#     nbrs = neigh.fit(X_rs)
+#     # Find the nearest neighbors of the data points and determine the distances
+#     distances, indices = nbrs.kneighbors(X_rs)
+#     distances = np.sort(distances, axis=0)
+#     distances = distances[:, 1]
+#     plt.plot(distances)
+#     plt.savefig('NearestNeighbors.png')
+#
+# plt.show()
 
 # Init NearestNeighbors with n_neighbors = 4 and fit on the training data
 # distances_nn()
@@ -130,12 +130,21 @@ plt.show()
 # print(set(m.labels_))
 
 # plot2d(X, m.labels_, m.labels_, mode=PCA)
-m = DBSCAN(eps=1.5, min_samples=5)
-m.fit(X)
-print(set(m.labels_))
+# m = DBSCAN(eps=1.5, min_samples=5)
+# m.fit(X)
+# print(set(m.labels_))
 
-m = DBSCAN(eps=0.7, min_samples=5)
-m.fit(X)
-print(set(m.labels_))
-from sklearn.manifold import TSNE
-plot2d(X, m.labels_, m.labels_, mode=TSNE)
+
+n_c = []
+r = np.arange(0.3, 3, step=0.1)
+for i in r:
+    m = DBSCAN(eps=i, min_samples=5)
+    m.fit(X_rs)
+    print(set(m.labels_).__len__())
+    n_c.append(set(m.labels_).__len__())
+# from sklearn.manifold import TSNE
+
+# plot2d(X, m.labels_, m.labels_, mode=TSNE)
+
+# m = DBSCAN(eps=1.5, min_samples=5)
+# m.fit(X_rs)
