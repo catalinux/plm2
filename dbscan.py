@@ -63,16 +63,17 @@ X_rs, y_rs = sampler.fit_sample(X, y)
 
 
 # Init NearestNeighbors with n_neighbors = 4 and fit on the training data
-neigh = NearestNeighbors(n_neighbors=4)
-nbrs = neigh.fit(X)
+neigh = NearestNeighbors(n_neighbors=32)
+nbrs = neigh.fit(X_rs)
 
 # Find the nearest neighbors of the data points and determine the distances
-distances, indices = nbrs.kneighbors(X)
+distances, indices = nbrs.kneighbors(X_rs)
 
 distances = np.sort(distances, axis=0)
 distances = distances[:, 1]
 
 plt.plot(distances)
+plt.savefig('NearestNeighbors.png')
 plt.show()
 # fig = plt.figure()
 # l = [2, 3,40,60]
