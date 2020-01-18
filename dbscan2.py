@@ -26,6 +26,5 @@ X = StandardScaler().fit_transform(X)
 
 diabetic_data = X
 db_scan = DBSCAN(eps=3, min_samples=4).fit(diabetic_data)
-core_samples_mask = np.zeros_like(db_scan.labels_, dtype=bool)
-core_samples_mask[db_scan.core_sample_indices_] = True
+
 labels = db_scan.labels_

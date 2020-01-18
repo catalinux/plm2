@@ -31,7 +31,7 @@ db_score = []
 
 y = df["readmitted"]
 X = prepare_data(df)
-X.drop("readmitted", inplace=True)
+X.drop("readmitted", inplace=True, axis=1)
 scaler = StandardScaler()
 X = StandardScaler().fit_transform(X)
 
@@ -41,23 +41,23 @@ from imblearn.under_sampling import (RandomUnderSampler,
                                      NeighbourhoodCleaningRule,
                                      NearMiss)
 
-sampler = NearMiss(n_jobs=30)
+sampler = NearMiss(n_jobs=32)
 X_rs, y_rs = sampler.fit_sample(X, y)
 
 from sklearn.metrics import silhouette_score, davies_bouldin_score, v_measure_score
 
-r = range(2, 40)
+r = range(2, 12)
 for i in r:
     print("===== " + str(i))
-    km = KMeans(n_clusters=i, random_state=0, n_jobs=30).fit(X_rs)
+    km = KMeans(n_clusters=i, random_state=0, n_jobs=32).fit(X_rs)
     preds = km.predict(X_rs)
 
     print("Score for number of cluster(s) {}: {}".format(i, km.score(X_rs)))
     km_scores.append(-km.score(X_rs))
 
     inertia.append(km.inertia_)
-    # silhouette = silhouette_score(X_rs, preds)
-    # km_silhouette.append(silhouette)
+    silhouette = silhouette_score(X_rs, preds,)
+    km_silhouette.append(silhouette)
     # print("Silhouette score for number of cluster(s) {}: {}".format(i, silhouette))
     #
     # db = davies_bouldin_score(X_rs, preds)
@@ -72,7 +72,7 @@ for i in r:
 scores = pd.DataFrame.from_dict({
     "k": r,
     "km_scores": km_scores,
-    # "km_silhouette": km_silhouette,
+    "km_silhouette": km_silhouette,
     # "db_score": db_score,
     # "inertia": inertia,
     #    "vmeasure_score": vmeasure_score,

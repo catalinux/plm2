@@ -15,6 +15,7 @@ print(__doc__)
 from util import get_data
 
 df = get_data()
+from util import prepare_data
 
 
 
@@ -25,12 +26,26 @@ range_n_clusters = [2, 3, 4, 5, 6]
 range_n_clusters = [4, 5, 6]
 from sklearn.preprocessing import StandardScaler
 
-X_std = X_std = StandardScaler().fit_transform(X)
+y = df["readmitted"]
+X = prepare_data(df)
+X.drop("readmitted", inplace=True, axis=1)
+scaler = StandardScaler()
+X = StandardScaler().fit_transform(X)
+
+from imblearn.under_sampling import (RandomUnderSampler,
+                                     ClusterCentroids,
+                                     TomekLinks,
+                                     NeighbourhoodCleaningRule,
+                                     NearMiss)
+
+sampler = NearMiss(n_jobs=2)
+X_rs, y_rs = sampler.fit_sample(X, y)
+
 
 from sklearn.manifold import TSNE
 
 transformer = TSNE(n_components=2)
-X_std = transformer.fit_transform(X_std)
+X_std = transformer.fit_transform(X_rs)
 
 for n_clusters in range_n_clusters:
     # Create a subplot with 1 row and 2 columns
@@ -112,5 +127,5 @@ for n_clusters in range_n_clusters:
     ax2.set_ylabel("Feature space for the 2nd feature")
 
     plt.suptitle(("n_clusters = %d" % n_clusters), fontsize=14, fontweight='bold')
-    fig.savefig(str(n_clusters)+'-sil.png')
+    fig.savefig(str(n_clusters)+'-all-sil-tsne.png')
     plt.show()

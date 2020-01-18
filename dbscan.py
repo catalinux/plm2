@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 
 from util import get_data
+from util import prepare_data
 from util import plot2d
 import pandas as pd
 df = get_data()
@@ -23,8 +24,23 @@ y = df['readmitted']
 
 from sklearn.preprocessing import StandardScaler
 
+from sklearn.preprocessing import StandardScaler
+
+y = df["readmitted"]
+X = prepare_data(df)
+X.drop("readmitted", inplace=True, axis=1)
 scaler = StandardScaler()
-X = scaler.fit_transform(X)
+X = StandardScaler().fit_transform(X)
+
+from imblearn.under_sampling import (RandomUnderSampler,
+                                     ClusterCentroids,
+                                     TomekLinks,
+                                     NeighbourhoodCleaningRule,
+                                     NearMiss)
+
+sampler = NearMiss(n_jobs=2)
+X_rs, y_rs = sampler.fit_sample(X, y)
+
 
 # sc=[]
 # for i in np.linspace(3,40):
