@@ -33,7 +33,7 @@ list = {
     'vmeasure_score': "",
     "inertia": ""
 }
-for col in ['km_scores', 'km_silhouette', 'db_score']:
+for col in ['km_scores', 'km_silhouette']:
     fig = plt.figure()
     list[col] = (fig)
     plt.plot(a["k"], a[col], 'bx-')

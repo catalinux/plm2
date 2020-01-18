@@ -102,6 +102,7 @@ def histnum():
 y = df["readmitted"]
 y_gender = df["gender"]
 X = prepare_data(df)
+from scipy import stats
 X.drop(["readmitted", "gender"], inplace=True, axis=1)
 scaler = StandardScaler()
 X = StandardScaler().fit_transform(X)
@@ -117,22 +118,26 @@ X_rs, y_rs = sampler.fit_sample(X, y)
 # plot3d(X_rs, y_rs, y_rs, PCA)
 # plot3d(X_rs, y_rs, y_rs, TSNE)
 
-tran = PCA(n_components=3)
-X_2_ = tran.fit_transform(X_rs)
-
-pca = PCA(n_components=10)
-pca.fit(df[num_df_list])
-variance = pca.explained_variance_ratio_
-var = np.cumsum(np.round(pca.explained_variance_ratio_, decimals=3) * 100)
-
-plt.ylabel('% Variance Explained')
-plt.xlabel('# of Features')
-plt.title('PCA Analysis')
-plt.ylim(30, 100.5)
-plt.style.context('seaborn-whitegrid')
-
-plt.plot(var)
-
-X=df[num_df_list]
-plot3d(X, y, y, PCA)
-plot3d(X, y, y, TSNE)
+# tran = PCA(n_components=3)
+# X_2_ = tran.fit_transform(X_rs)
+#
+# pca = PCA(n_components=10)
+# pca.fit(df[num_df_list])
+# variance = pca.explained_variance_ratio_
+# var = np.cumsum(np.round(pca.explained_variance_ratio_, decimals=3) * 100)
+#
+# plt.ylabel('% Variance Explained')
+# plt.xlabel('# of Features')
+# plt.title('PCA Analysis')
+# plt.ylim(30, 100.5)
+# plt.style.context('seaborn-whitegrid')
+#
+# plt.plot(var)
+#
+# X=df[num_df_list]
+# plot3d(X, y, y, PCA)
+# plot3d(X, y, y, TSNE)
+#
+#
+# plot2d(X_rs, y_rs, y_rs, PCA)
+plot3d(X_rs, y_rs, y_rs, PCA)

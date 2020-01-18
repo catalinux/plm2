@@ -6,7 +6,8 @@ from util import get_data
 from util import prepare_data
 from util import plot2d
 import pandas as pd
-df = get_data()
+
+df = get_data().sample(10000)
 from sklearn.decomposition import PCA
 import numpy as np
 from sklearn.datasets.samples_generator import make_blobs
@@ -14,6 +15,8 @@ from sklearn.neighbors import NearestNeighbors
 from sklearn.cluster import DBSCAN
 from matplotlib import pyplot as plt
 import seaborn as sns
+from util import plot3d
+from util import plot2d
 
 sns.set()
 
@@ -27,10 +30,11 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.preprocessing import StandardScaler
 
 y = df["readmitted"]
-X = prepare_data(df)
-X.drop("readmitted", inplace=True, axis=1)
-scaler = StandardScaler()
-X = StandardScaler().fit_transform(X)
+# X = prepare_data(df)
+# X =
+# X.drop("readmitted", inplace=True, axis=1)
+# scaler = StandardScaler()
+# X = StandardScaler().fit_transform(X)
 
 from imblearn.under_sampling import (RandomUnderSampler,
                                      ClusterCentroids,
@@ -38,9 +42,9 @@ from imblearn.under_sampling import (RandomUnderSampler,
                                      NeighbourhoodCleaningRule,
                                      NearMiss)
 
-sampler = NearMiss(n_jobs=2)
-X_rs, y_rs = sampler.fit_sample(X, y)
 
+# sampler = NearMiss(n_jobs=2)
+# X_rs, y_rs = sampler.fit_sample(X, y)
 
 # sc=[]
 # for i in np.linspace(3,40):
@@ -60,21 +64,20 @@ X_rs, y_rs = sampler.fit_sample(X, y)
 
 
 # plot2d(X, clustering.labels_, y, mode=PCA)
+def distances_nn():
+    neigh = NearestNeighbors(n_neighbors=32)
+    nbrs = neigh.fit(X)
+    # Find the nearest neighbors of the data points and determine the distances
+    distances, indices = nbrs.kneighbors(X)
+    distances = np.sort(distances, axis=0)
+    distances = distances[:, 1]
+    plt.plot(distances)
+    plt.savefig('NearestNeighbors.png')
+    plt.show()
 
 
 # Init NearestNeighbors with n_neighbors = 4 and fit on the training data
-neigh = NearestNeighbors(n_neighbors=32)
-nbrs = neigh.fit(X)
-
-# Find the nearest neighbors of the data points and determine the distances
-distances, indices = nbrs.kneighbors(X)
-
-distances = np.sort(distances, axis=0)
-distances = distances[:, 1]
-
-plt.plot(distances)
-plt.savefig('NearestNeighbors.png')
-plt.show()
+# distances_nn()
 # fig = plt.figure()
 # l = [2, 3,40,60]
 # for x in l:
@@ -91,8 +94,8 @@ plt.show()
 # plt.legend(l)
 # plt.show()
 
-#m = DBSCAN(eps=3, min_samples=5)
-#m.fit(X_rs)
+# m = DBSCAN(eps=3, min_samples=5)
+# m.fit(X_rs)
 # colors = ['royalblue', 'maroon', 'forestgreen', 'mediumorchid', 'tan', 'deeppink', 'olive', 'goldenrod', 'lightcyan',
 #           'navy']
 # vectorizer = np.vectorize(lambda x: colors[x % len(colors)])
@@ -110,3 +113,18 @@ plt.show()
 #
 # plt.figure()
 # #plot2d(X, y, y, TSNE)
+
+
+# c_c=[]
+# for i in [0.4,0.8,1,1.3,1.6,1.9,2.3,2.4]:
+#     m = DBSCAN(eps=0.3, min_samples=5)
+#     m.fit(X)
+#     set(m.labels_).__len__()
+#     c_c.append(set(m.labels_).__len__())
+
+
+m = DBSCAN(eps=5, min_samples=5)
+m.fit(X)
+print(set(m.labels_))
+
+#plot2d(X, m.labels_, m.labels_, mode=PCA)

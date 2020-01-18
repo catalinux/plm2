@@ -75,7 +75,7 @@ scores = pd.DataFrame.from_dict({
     "k": r,
     "km_scores": km_scores,
     "km_silhouette": km_silhouette,
-    # "db_score": db_score,
+     "db_score": db_score,
     # "inertia": inertia,
     #    "vmeasure_score": vmeasure_score,
 })
