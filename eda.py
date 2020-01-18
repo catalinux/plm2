@@ -9,7 +9,11 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn import metrics
 from util import get_data
+from util import prepare_data
 from util import get_unclean_data
+from util import plot3d
+from util import plot2d
+from sklearn.decomposition import PCA
 
 df = get_data()
 cat_df_list = list(df.select_dtypes(include=['object']))
@@ -78,14 +82,15 @@ def histnum():
         plt.title(x)
         plt.show()
 
-histnum()
-    # heatmap()
-    # plot_categorical()
-    # explaind_variance()
-    # generate_scatters()
 
+# histnum()
+# heatmap()
+# plot_categorical()
+# explaind_variance()
+# generate_scatters()
 
 
 # for x in num_df_list:
 #     sns.boxplot(x=df[x])
 #     plt.show()
+

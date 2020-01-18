@@ -1,3 +1,5 @@
+from sklearn.preprocessing import LabelEncoder
+
 import pickle
 import pandas as pd
 import numpy as np
@@ -35,20 +37,20 @@ from sklearn.metrics import silhouette_score, davies_bouldin_score, v_measure_sc
 
 r = range(2, 40)
 for i in r:
-    km = KMeans(n_clusters=i, random_state=0, n_jobs=64).fit(X_scaled)
+    km = KMeans(n_clusters=i, random_state=0, n_jobs=2).fit(X_scaled)
     preds = km.predict(X_scaled)
 
     print("Score for number of cluster(s) {}: {}".format(i, km.score(X_scaled)))
     km_scores.append(-km.score(X_scaled))
 
     inertia.append(km.inertia_)
-    silhouette = silhouette_score(X_scaled, preds)
-    km_silhouette.append(silhouette)
-    print("Silhouette score for number of cluster(s) {}: {}".format(i, silhouette))
-
-    db = davies_bouldin_score(X_scaled, preds)
-    db_score.append(db)
-    print("Davies Bouldin score for number of cluster(s) {}: {}".format(i, db))
+    # silhouette = silhouette_score(X_scaled, preds)
+    # km_silhouette.append(silhouette)
+    # print("Silhouette score for number of cluster(s) {}: {}".format(i, silhouette))
+    #
+    # db = davies_bouldin_score(X_scaled, preds)
+    # db_score.append(db)
+    # print("Davies Bouldin score for number of cluster(s) {}: {}".format(i, db))
 
 
 

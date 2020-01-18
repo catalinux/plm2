@@ -1,3 +1,4 @@
+from sklearn.preprocessing import LabelEncoder
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -136,7 +137,6 @@ def get_data():
     df['admission_type_id'] = df['admission_type_id'].replace([8], [6])
     df['admission_type_id'] = df['admission_type_id'].replace([6], [5])
 
-
     df['diag_1'] = diag_mapper_icd9(df['diag_1'])
     df['diag_2'] = diag_mapper_icd9(df['diag_2'])
     df['diag_3'] = diag_mapper_icd9(df['diag_3'])
@@ -220,14 +220,13 @@ def get_data():
     df['admission_type_id'] = df['admission_type_id'].map(t_map)
     df['discharge_disposition_id'] = df['discharge_disposition_id'].map(d_map)
 
-
     df.drop(['encounter_id', 'patient_nbr'], axis=1, inplace=True)
     s = df["admission_source_id"].value_counts()
     df['admission_source_id'].isin(s.index[s >= 30]).index
     # df = df.drop(['discharge_disposition_id', 'admission_source_id'], axis=1)
     df = df[df["service_utilization"] < 11]
     df.drop("admission_source_id", axis=1, inplace=True)
-    df.dropna()
+    df.dropna(inplace=True)
     return df
 
 
@@ -325,3 +324,12 @@ def diag_mapper_icd9(diag):
     return diag_new
 
 
+def prepare_data(data):
+    cat_df_list = list(data.select_dtypes(include=['object']))
+    for i in cat_df_list:
+        le = LabelEncoder()
+        le.fit(list(data[i].unique()))
+        data.loc[:, i] = le.transform(data[i])
+    prepped_data = data
+    prepped_data = pd.get_dummies(data, prefix=cat_df_list, prefix_sep='_', columns=cat_df_list, drop_first=True)
+    return  prepped_data

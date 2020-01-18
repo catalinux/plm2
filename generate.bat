@@ -1,1 +1,1 @@
-pandoc report.md -o report.pdf --metadata title:"DC Properties" --metadata author:"Catalin Banu" --metadata date:"January 2010"  --pdf-engine=xelatex -V geometry:margin=0.7in
+pandoc report.md -o report.pdf --metadata title:"Diabetes 130-US hospitals for years 1999-2008" --metadata author:"Catalin Banu" --metadata date:"January 2010"  --pdf-engine=xelatex -V geometry:margin=0.7in

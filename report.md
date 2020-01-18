@@ -1,8 +1,8 @@
-## Dataset
+# Dataset
 
-### Abstract
+## Abstract
 
-### Exploratory Data Analysis
+## Exploratory Data Analysis
 
 A couples of observations are made
 
@@ -44,7 +44,7 @@ Looking at the missing values, I will:
  
   
  
-###Data processing and feature engineering
+##Data processing and feature engineering
  
 - categorical fields into numerical: readmitted, age
 - some numeric intro categorical: diag_1 , diag_2, diag_3
@@ -55,7 +55,10 @@ Kmean and DB-Scan perform well on numeric features as they need a distance betwe
 
 - age ranges into - age median
 - medications that were taken generated a sum of the meds 
--  
+
+
+For categorical features I reduced their unique values and after that LabeledEncoder and dummied  
+ 
  
  
  
