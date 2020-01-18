@@ -18,6 +18,7 @@ from sklearn.cluster import KMeans
 
 from util import get_data
 from util import prepare_data
+from util import prepare_data
 
 df = get_data()
 

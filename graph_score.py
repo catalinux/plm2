@@ -25,7 +25,7 @@ labels = {
     "inertia": "Distortion value"
 }
 
-a = pd.read_pickle('score40.bin')
+a = pd.read_pickle('score.bin')
 list = {
     "km_scores": "",
     'km_silhouette': "",

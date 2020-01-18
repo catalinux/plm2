@@ -91,8 +91,8 @@ plt.show()
 # plt.legend(l)
 # plt.show()
 
-m = DBSCAN(eps=3, min_samples=5)
-m.fit(X)
+#m = DBSCAN(eps=3, min_samples=5)
+#m.fit(X_rs)
 colors = ['royalblue', 'maroon', 'forestgreen', 'mediumorchid', 'tan', 'deeppink', 'olive', 'goldenrod', 'lightcyan',
           'navy']
 vectorizer = np.vectorize(lambda x: colors[x % len(colors)])

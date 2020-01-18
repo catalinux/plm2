@@ -95,19 +95,18 @@ def histnum():
 #     plt.show()
 
 
-def small_set():
-    y = df["readmitted"]
-    X = prepare_data(df)
-    X.drop("readmitted", inplace=True, axis=1)
-    scaler = StandardScaler()
-    X = StandardScaler().fit_transform(X)
+y = df["readmitted"]
+X = prepare_data(df)
+X.drop("readmitted", inplace=True, axis=1)
+scaler = StandardScaler()
+X = StandardScaler().fit_transform(X)
 
-    from imblearn.under_sampling import (RandomUnderSampler,
-                                         ClusterCentroids,
-                                         TomekLinks,
-                                         NeighbourhoodCleaningRule,
-                                         NearMiss)
+from imblearn.under_sampling import (RandomUnderSampler,
+                                     ClusterCentroids,
+                                     TomekLinks,
+                                     NeighbourhoodCleaningRule,
+                                     NearMiss)
 
-    sampler = NearMiss(n_jobs=2)
-    X_rs, y_rs = sampler.fit_sample(X, y)
-    plot3d(X_rs, y_rs, PCA)
+sampler = NearMiss(n_jobs=2)
+X_rs, y_rs = sampler.fit_sample(X, y)
+plot3d(X_rs, y_rs, y_rs, PCA)
