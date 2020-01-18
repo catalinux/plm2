@@ -17,6 +17,7 @@ from util import prepare_data
 from util import get_unclean_data
 from util import plot3d
 from util import plot2d
+from util import drop_numerical_outliers
 from sklearn.decomposition import PCA
 
 df = get_data()
@@ -139,5 +140,5 @@ X_rs, y_rs = sampler.fit_sample(X, y)
 # plot3d(X, y, y, TSNE)
 #
 #
-# plot2d(X_rs, y_rs, y_rs, PCA)
-plot3d(X_rs, y_rs, y_rs, PCA)
+plot2d(X_rs, y_rs, y_rs, PCA)
+#plot3d(X_rs, y_rs, y_rs, PCA)

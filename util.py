@@ -227,6 +227,7 @@ def get_data():
     df = df[df["service_utilization"] < 11]
     df.drop("admission_source_id", axis=1, inplace=True)
     df.dropna(inplace=True)
+    df = df[df['num_lab_procedures'] < 80]
     drop_numerical_outliers(df, 6)
 
     return df
@@ -340,8 +341,10 @@ def prepare_data(data):
 
 from scipy import stats
 
-def drop_numerical_outliers(df, z_thresh=4):
+
+def drop_numerical_outliers(df, z_thresh=3):
     # Constrains will contain `True` or `False` depending on if it is a value below the threshold.
+    print(df.select_dtypes(include=[np.number]))
     constrains = df.select_dtypes(include=[np.number]) \
         .apply(lambda x: np.abs(stats.zscore(x)) < z_thresh, reduce=False) \
         .all(axis=1)
