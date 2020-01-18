@@ -31,7 +31,7 @@ db_score = []
 
 y = df["readmitted"]
 X = prepare_data(df)
-
+X.drop("readmitted", inplace=True)
 scaler = StandardScaler()
 X = StandardScaler().fit_transform(X)
 
@@ -41,7 +41,7 @@ from imblearn.under_sampling import (RandomUnderSampler,
                                      NeighbourhoodCleaningRule,
                                      NearMiss)
 
-sampler = NearMiss()
+sampler = NearMiss(n_jobs=30)
 X_rs, y_rs = sampler.fit_sample(X, y)
 
 from sklearn.metrics import silhouette_score, davies_bouldin_score, v_measure_score
@@ -49,7 +49,7 @@ from sklearn.metrics import silhouette_score, davies_bouldin_score, v_measure_sc
 r = range(2, 40)
 for i in r:
     print("===== " + str(i))
-    km = KMeans(n_clusters=i, random_state=0, n_jobs=2).fit(X_rs)
+    km = KMeans(n_clusters=i, random_state=0, n_jobs=30).fit(X_rs)
     preds = km.predict(X_rs)
 
     print("Score for number of cluster(s) {}: {}".format(i, km.score(X_rs)))

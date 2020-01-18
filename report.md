@@ -12,7 +12,7 @@ A couples of observations are made
 
 
 
-###Types
+**Types**
 
 | type   | count |
 |--------|-------|
@@ -22,7 +22,7 @@ A couples of observations are made
 
 
 
-###Missing Values
+**Missing Values**
 
 | name              |   %    |
 |-------------------|--------|
@@ -40,17 +40,18 @@ Looking at the missing values, I will:
  - drop na rows for diag_1, diag , diag_3, race 
  
  
-##Variation 
- 
-  
+
  
 ##Data processing and feature engineering
  
+ 
+**Removal**  
 - categorical fields into numerical: readmitted, age
 - some numeric intro categorical: diag_1 , diag_2, diag_3
-- categories with low counts (less than 1%) were remooed
+- categories with low counts (less than 1%) were removed
 -   
 
+**Tramsformation**
 Kmean and DB-Scan perform well on numeric features as they need a distance between to points,  so I transformed as many as I could from categorical to numeric
 
 - age ranges into - age median
