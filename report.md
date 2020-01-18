@@ -94,6 +94,9 @@ Looking at these tree graphs it looks that the best value for K  would be 3 or 4
 
 DBSCAN is data clustering algorithm that groups points which are closely packed together in feature space
 
+**Choosing paramaters**
+
+
 
 
 ###Hyperparameter tuning

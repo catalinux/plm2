@@ -4,7 +4,7 @@ import pandas as pd
 
 from util import get_data
 from util import plot2d
-
+import pandas as pd
 df = get_data()
 from sklearn.decomposition import PCA
 import numpy as np
@@ -13,14 +13,18 @@ from sklearn.neighbors import NearestNeighbors
 from sklearn.cluster import DBSCAN
 from matplotlib import pyplot as plt
 import seaborn as sns
-sns.set()
 
+sns.set()
 
 cat_df_list = list(df.select_dtypes(include=['object']))
 num_df_list = list(df.select_dtypes(include=['float64', 'int64']))
 X = df[num_df_list]
-y=df['readmitted']
+y = df['readmitted']
 
+from sklearn.preprocessing import StandardScaler
+
+scaler = StandardScaler()
+X = scaler.fit_transform(X)
 
 # sc=[]
 # for i in np.linspace(3,40):
@@ -39,21 +43,41 @@ y=df['readmitted']
 #     })
 
 
-#plot2d(X, clustering.labels_, y, mode=PCA)
+# plot2d(X, clustering.labels_, y, mode=PCA)
 
 
-neigh = NearestNeighbors(n_neighbors=2)
+# Init NearestNeighbors with n_neighbors = 4 and fit on the training data
+neigh = NearestNeighbors(n_neighbors=4)
 nbrs = neigh.fit(X)
+
+# Find the nearest neighbors of the data points and determine the distances
 distances, indices = nbrs.kneighbors(X)
 
 distances = np.sort(distances, axis=0)
-distances = distances[:,1]
+distances = distances[:, 1]
+
 plt.plot(distances)
+
+fig = plt.figure()
+for x in [2,3]:
+    # Init NearestNeighbors with n_neighbors = 4 and fit on the training data
+    neigh = NearestNeighbors(n_neighbors=x)
+    nbrs = neigh.fit(X)
+    # Find the nearest neighbors of the data points and determine the distances
+    distances, indices = nbrs.kneighbors(X)
+    distances = np.sort(distances, axis=0)
+    distances = distances[:, 1]
+    plt.plot(distances)
+    fig.savefig('')
+
+fig.save('img/epsilon.png')
+# plt.legend([2,3,4,5])
 plt.show()
 
 m = DBSCAN(eps=5, min_samples=5)
 m.fit(X)
-colors = ['royalblue', 'maroon', 'forestgreen', 'mediumorchid', 'tan', 'deeppink', 'olive', 'goldenrod', 'lightcyan', 'navy']
+colors = ['royalblue', 'maroon', 'forestgreen', 'mediumorchid', 'tan', 'deeppink', 'olive', 'goldenrod', 'lightcyan',
+          'navy']
 vectorizer = np.vectorize(lambda x: colors[x % len(colors)])
 
 #
