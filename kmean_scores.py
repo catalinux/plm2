@@ -8,6 +8,8 @@ from sklearn.linear_model import LinearRegression
 from sklearn import metrics
 from munkres import Munkres, print_matrix
 
+from sklearn import metrics
+
 from sklearn.metrics import cluster
 from sklearn.cluster import KMeans
 
@@ -18,6 +20,7 @@ df = get_data()
 cat_df_list = list(df.select_dtypes(include=['object']))
 num_df_list = list(df.select_dtypes(include=['float64', 'int64']))
 km_scores = []
+inertia = []
 km_silhouette = []
 vmeasure_score = []
 db_score = []
@@ -30,13 +33,15 @@ X_scaled = scaler.fit_transform(numdf)
 y = df["gender"]
 from sklearn.metrics import silhouette_score, davies_bouldin_score, v_measure_score
 
-for i in range(2, 12):
+r = range(2, 12)
+for i in r:
     km = KMeans(n_clusters=i, random_state=0).fit(X_scaled)
     preds = km.predict(X_scaled)
 
     print("Score for number of cluster(s) {}: {}".format(i, km.score(X_scaled)))
     km_scores.append(-km.score(X_scaled))
 
+    inertia.append(km.inertia_)
     silhouette = silhouette_score(X_scaled, preds)
     km_silhouette.append(silhouette)
     print("Silhouette score for number of cluster(s) {}: {}".format(i, silhouette))
@@ -51,6 +56,7 @@ for i in range(2, 12):
     print("-" * 100)
 
 scores = pd.DataFrame.from_dict({
+    "k": r,
     "km_scores": km_scores,
     "km_silhouette": km_silhouette,
     "db_score": db_score,

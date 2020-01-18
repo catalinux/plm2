@@ -13,7 +13,6 @@ from util import plot3d
 from mpl_toolkits import mplot3d
 
 df = get_data()
-df["gender_t"] = df["gender"].map({"Female": 0, "Male": 1})
 cat_df_list = list(df.select_dtypes(include=['object']))
 num_df_list = list(df.select_dtypes(include=['float64', 'int64']))
 num_df = df[num_df_list]
@@ -31,13 +30,45 @@ from sklearn.cluster import KMeans
 #     print(f'({row}, {column}) -> {value}')
 # print('total cost: total', total)
 from sklearn.manifold import TSNE
-X = df[num_df_list]
-clusterer = KMeans(n_clusters=2, random_state=10)
-cluster_labels = clusterer.fit_predict(df[num_df_list])
 
-silhouette_avg = metrics.silhouette_score(X, cluster_labels)
-print("For n_clusters =", 2,
-      "The average silhouette_score is :", silhouette_avg)
+# X = num_df.sample(20000)
+# y = df["readmitted"]
+# plot2d(X, y, y, TSNE)
+# plot3d(X, y, y, TSNE)
+#
+#
+# X = num_df[:20000]
+# y = df["gender_t"]
+# plot2d(X, y, y, TSNE)
+# plot3d(X, y, y, TSNE)
 
-# Compute the silhouette scores for each sample
-sample_silhouette_values = metrics.silhouette_samples(X, cluster_labels)
+
+df_pd = df[num_df_list]
+# OverSampling using SMOTE
+X = df_pd.loc[:, df_pd.columns != 'readmitted']
+y = df_pd['readmitted']
+from imblearn.over_sampling import SMOTE
+
+from collections import Counter
+
+from imblearn.under_sampling import ClusterCentroids
+
+cc = ClusterCentroids(random_state=0)
+X_resampled, y_resampled = cc.fit_resample(X, y)
+print(sorted(Counter(y_resampled).items()))
+
+
+X = num_df
+y = df["readmitted"]
+plot2d(X, y, y, TSNE)
+#plot3d(X, y, y, TSNE)
+
+
+# X = num_df.sample(20000)
+# y = df["gender_t"]
+# plot2d(X, y, y, TSNE)
+# plot3d(X, y, y, TSNE)
+#
+#
+# df_pd = pd.get_dummies(df, columns=['race', 'gender', 'admission','max_glu_serum', 'A1Cresult'], drop_first = True)
+# y = df_pd["readmitted"]

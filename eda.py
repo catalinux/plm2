@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 from util import plot2d
+import itertools
 
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
@@ -11,8 +12,10 @@ from util import get_data
 from util import get_unclean_data
 
 df = get_data()
+df=df[df["readmitted"]==0]
 cat_df_list = list(df.select_dtypes(include=['object']))
 num_df_list = list(df.select_dtypes(include=['float64', 'int64']))
+num_df = df[num_df_list]
 
 from sklearn.preprocessing import StandardScaler
 
@@ -34,12 +37,8 @@ def explaind_variance():
     plt.show()
 
 
-explaind_variance()
-
 # df[df['readmitted']=='NO'].plot(kind='scatter',x=num_df_list[0],y=num_df_list[1],color='r')
 # df[df['readmitted']!='NO'].plot(kind='scatter',x=num_df_list[0],y=num_df_list[1],color='b')
-
-import itertools
 
 
 def generate_scatters():
@@ -64,17 +63,13 @@ def heatmap():
                 square=True, linewidths=.5, cbar_kws={"shrink": .5})
 
 
-# heatmap()
-
-
 def plot_categorical():
     for x in cat_df_list:
         plt.figure()
-        sns.countplot(x=x, data=df)
+        c = sns.countplot(x=x, data=df)
+        c.set_xticklabels(c.get_xticklabels(), rotation=45)
+
         plt.show()
-
-
-# plot_categorical()
 
 
 def histnum():
@@ -84,4 +79,13 @@ def histnum():
         plt.title(x)
         plt.show()
 
-# histnum()
+    # histnum()
+    # heatmap()
+    # plot_categorical()
+    # explaind_variance()
+    # generate_scatters()
+
+
+for x in num_df_list:
+    sns.boxplot(x=df[x])
+    plt.show()

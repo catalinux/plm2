@@ -69,7 +69,6 @@ def plot3d(X, y_pred, y_true, mode=None, centroids=None):
 
 def get_data():
     df = pd.read_csv('dataset_diabetes/diabetic_data.csv', na_values='?')
-
     print("Shap1 ", df.shape)
     df = df.drop_duplicates(subset=['patient_nbr'], keep='first')
     print("Shape 2", df.shape)
@@ -80,6 +79,23 @@ def get_data():
             'glyburide', 'tolbutamide', 'pioglitazone', 'rosiglitazone', 'acarbose', 'miglitol', 'troglitazone',
             'tolazamide', 'examide', 'citoglipton', 'insulin', 'glyburide-metformin', 'glipizide-metformin',
             'glimepiride-pioglitazone', 'metformin-rosiglitazone', 'metformin-pioglitazone']
+    df['n_medication_changes'] = 0
+    for i in meds:
+        temp_col = str(i) + '_'
+        df[temp_col] = df[i].apply(lambda x: 0 if (x == 'No' or x == 'Steady') else 1)
+        df['n_medication_changes'] = df['n_medication_changes'] + df[temp_col]
+        del df[temp_col]
+    # 3- n_medications
+    # count medications
+    for i in meds:
+        df[i] = df[i].replace('No', 0)
+        df[i] = df[i].replace('Steady', 1)
+        df[i] = df[i].replace('Up', 1)
+        df[i] = df[i].replace('Down', 1)
+    df['n_medications'] = 0
+    for i in meds:
+        df['n_medications'] = df['n_medications'] + df[i]
+
     df = df.drop(meds, axis=1)
 
     df['readmitted'] = df['readmitted'].replace('>30', 0)
@@ -92,6 +108,54 @@ def get_data():
     df['age'] = df['age'].astype('int64')
 
     df['diabetesMed'] = np.where(df['diabetesMed'] == "Yes", 1, 0)
+
+    df.drop(df['discharge_disposition_id'].isin([13, 14, 11, 19, 20, 21]).index)
+
+    # 11, 19, 20, 21     mean    the     patient    died
+    df['admission_type_id'].value_counts()
+    df['admission_type_id'] = df['admission_type_id'].replace([8], [6])
+    df['admission_type_id'] = df['admission_type_id'].replace([6], [5])
+
+    replacelist = ['home', 'hospital', 'nursing', 'nursing', 'hospice', 'hhealth', 'leftAMA', 'hhealth', 'hospital',
+                   'hospital',
+                   'died', 'hospital', 'hospice', 'hospice', 'hospital', 'outpatient', 'outpatient', 'unknown', 'died',
+                   'died',
+                   'died', 'outpatient', 'hospital', 'nursing', 'unknown', 'unknown', 'nursing', 'psych', 'hospital',
+                   'outpatient']
+
+    df['discharge_disposition_id'] = df['discharge_disposition_id'].replace(list(range(1, 31)), replacelist)
+    df["gender_t"] = df["gender"].map({"Female": 0, "Male": 1})
+    df["admission"] = df["admission_source_id"].map({1: " Physician Referral",
+                                                     2: "Clinic Referral",
+                                                     3: "HMO Referral",
+                                                     4: "Transfer from a hospital",
+                                                     5: " Transfer from a Skilled Nursing Facility (SNF)",
+                                                     6: " Transfer from another health care facility",
+                                                     7: " Emergency Room",
+                                                     8: " Court/Law Enforcement",
+                                                     9: " Not Available",
+                                                     10: " Transfer from critial access hospital",
+                                                     11: "Normal Delivery",
+                                                     12: " Premature Delivery",
+                                                     13: " Sick Baby",
+                                                     14: " Extramural Birth",
+                                                     15: "Not Available",
+                                                     17: "NULL",
+                                                     18: " Transfer From Another Home Health Agency",
+                                                     19: "Readmission to Same Home Health Agency",
+                                                     20: " Not Mapped",
+                                                     21: "Unknown/Invalid",
+                                                     22: " Transfer from hospital inpt/same fac reslt in a sep claim",
+                                                     23: " Born inside this hospital",
+                                                     24: " Born outside this hospital",
+                                                     25: " Transfer from Ambulatory Surgery Center",
+                                                     26: "Transfer from Hospice"});
+
+    df.drop(['admission_type_id', 'encounter_id', 'patient_nbr'], axis=1, inplace=True)
+    s = df["admission_source_id"].value_counts()
+    df['admission_source_id'].isin(s.index[s >= 30]).index
+
+    df = df.drop(['discharge_disposition_id','admission_source_id'], axis=1)
 
     return df
 
