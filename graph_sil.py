@@ -16,6 +16,8 @@ from util import get_data
 
 df = get_data()
 
+
+
 cat_df_list = list(df.select_dtypes(include=['object']))
 num_df_list = list(df.select_dtypes(include=['float64', 'int64']))
 X = df[num_df_list]
@@ -110,5 +112,5 @@ for n_clusters in range_n_clusters:
     ax2.set_ylabel("Feature space for the 2nd feature")
 
     plt.suptitle(("n_clusters = %d" % n_clusters), fontsize=14, fontweight='bold')
-
+    fig.savefig(str(n_clusters)+'-sil.png')
     plt.show()
