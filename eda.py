@@ -1,8 +1,12 @@
+from sklearn.cluster import KMeans
+from mpl_toolkits.mplot3d import Axes3D
+from sklearn.manifold import TSNE
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 from util import plot2d
+
 import itertools
 
 from sklearn.model_selection import train_test_split
@@ -96,8 +100,9 @@ def histnum():
 
 
 y = df["readmitted"]
+y_gender = df["gender"]
 X = prepare_data(df)
-X.drop("readmitted", inplace=True, axis=1)
+X.drop(["readmitted", "gender"], inplace=True, axis=1)
 scaler = StandardScaler()
 X = StandardScaler().fit_transform(X)
 
@@ -107,6 +112,27 @@ from imblearn.under_sampling import (RandomUnderSampler,
                                      NeighbourhoodCleaningRule,
                                      NearMiss)
 
-sampler = NearMiss(n_jobs=2)
+sampler = NearMiss()
 X_rs, y_rs = sampler.fit_sample(X, y)
-plot3d(X_rs, y_rs, y_rs, PCA)
+# plot3d(X_rs, y_rs, y_rs, PCA)
+# plot3d(X_rs, y_rs, y_rs, TSNE)
+
+tran = PCA(n_components=3)
+X_2_ = tran.fit_transform(X_rs)
+
+pca = PCA(n_components=10)
+pca.fit(df[num_df_list])
+variance = pca.explained_variance_ratio_
+var = np.cumsum(np.round(pca.explained_variance_ratio_, decimals=3) * 100)
+
+plt.ylabel('% Variance Explained')
+plt.xlabel('# of Features')
+plt.title('PCA Analysis')
+plt.ylim(30, 100.5)
+plt.style.context('seaborn-whitegrid')
+
+plt.plot(var)
+
+X=df[num_df_list]
+plot3d(X, y, y, PCA)
+plot3d(X, y, y, TSNE)

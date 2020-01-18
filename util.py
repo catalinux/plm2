@@ -67,7 +67,7 @@ def plot3d(X, y_pred, y_true, mode=None, centroids=None, name=''):
     fig = plt.figure()
     ax = fig.add_subplot(projection='3d')
     ax.elev = 30
-    ax.azim = 120
+    ax.azim = 12
 
     for ix, iyp, iyt in zip(X_r, y_pred, y_true):
         ax.plot(xs=[ix[0]], ys=[ix[1]], zs=[ix[2]], zdir='z',
@@ -325,7 +325,7 @@ def diag_mapper_icd9(diag):
 
 
 def prepare_data(data):
-    cat_df_list = list(data.select_dtypes(include=['object']))
+    cat_df_list = ['race',  'admission_type_id', 'discharge_disposition_id', 'diag_1', 'diag_2', 'diag_3', 'max_glu_serum', 'A1Cresult', 'change']
     print("Encoding : ", cat_df_list)
     for i in cat_df_list:
         le = LabelEncoder()

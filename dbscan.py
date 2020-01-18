@@ -64,10 +64,10 @@ X_rs, y_rs = sampler.fit_sample(X, y)
 
 # Init NearestNeighbors with n_neighbors = 4 and fit on the training data
 neigh = NearestNeighbors(n_neighbors=32)
-nbrs = neigh.fit(X_rs)
+nbrs = neigh.fit(X)
 
 # Find the nearest neighbors of the data points and determine the distances
-distances, indices = nbrs.kneighbors(X_rs)
+distances, indices = nbrs.kneighbors(X)
 
 distances = np.sort(distances, axis=0)
 distances = distances[:, 1]
@@ -93,9 +93,9 @@ plt.show()
 
 #m = DBSCAN(eps=3, min_samples=5)
 #m.fit(X_rs)
-colors = ['royalblue', 'maroon', 'forestgreen', 'mediumorchid', 'tan', 'deeppink', 'olive', 'goldenrod', 'lightcyan',
-          'navy']
-vectorizer = np.vectorize(lambda x: colors[x % len(colors)])
+# colors = ['royalblue', 'maroon', 'forestgreen', 'mediumorchid', 'tan', 'deeppink', 'olive', 'goldenrod', 'lightcyan',
+#           'navy']
+# vectorizer = np.vectorize(lambda x: colors[x % len(colors)])
 
 #
 # clusters = m.labels_

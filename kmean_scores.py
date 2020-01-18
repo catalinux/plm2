@@ -31,8 +31,8 @@ vmeasure_score = []
 db_score = []
 
 y = df["readmitted"]
-X = prepare_data(df)
-X.drop("readmitted", inplace=True, axis=1)
+X = df[num_df_list]
+#X.drop("readmitted", inplace=True, axis=1)
 scaler = StandardScaler()
 X = StandardScaler().fit_transform(X)
 
@@ -42,8 +42,9 @@ from imblearn.under_sampling import (RandomUnderSampler,
                                      NeighbourhoodCleaningRule,
                                      NearMiss)
 
-sampler = NearMiss(n_jobs=32)
-X_rs, y_rs = sampler.fit_sample(X, y)
+# sampler = NearMiss(n_jobs=32)
+# X_rs, y_rs = sampler.fit_sample(X, y)
+X_rs=X
 
 from sklearn.metrics import silhouette_score, davies_bouldin_score, v_measure_score
 
@@ -57,7 +58,7 @@ for i in r:
     km_scores.append(-km.score(X_rs))
 
     inertia.append(km.inertia_)
-    silhouette = silhouette_score(X_rs, preds,)
+    silhouette = silhouette_score(X_rs, preds, )
     km_silhouette.append(silhouette)
     # print("Silhouette score for number of cluster(s) {}: {}".format(i, silhouette))
     #

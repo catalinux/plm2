@@ -60,7 +60,10 @@ Kmean and DB-Scan perform well on numeric features as they need a distance betwe
 
 For categorical features I reduced their unique values and after that LabeledEncoder and dummied  
  
- 
+
+**Class imbalance
+
+Undersamples was tried but no results were able to generate anymore
  
  
  
